@@ -300,7 +300,7 @@ footer {
 
 .video-card__title {
   width: 7rem;
-  aspect-ratio: 1105/200;
+  aspect-ratio: 112/20.2667;
 }
 .video-card__title img {
   object-fit: contain;
@@ -308,7 +308,7 @@ footer {
 
 .video-card__title--double {
   width: 7rem;
-  aspect-ratio: 1105/200;
+  aspect-ratio: 112/20.2667;
 }
 .video-card__title--double img {
   object-fit: cover;
@@ -341,14 +341,12 @@ footer {
   }
   .video-card__title {
     width: 9rem;
-    aspect-ratio: 1105/200;
   }
   .video-card__title img {
     object-fit: contain;
   }
   .video-card__title--double {
     width: 9rem;
-    aspect-ratio: 1105/200;
   }
   .video-card__title--double img {
     object-fit: cover;
@@ -362,6 +360,7 @@ footer {
 }
 .content-title-text.programming-title {
   width: 8rem;
+  aspect-ratio: 128/20.9167;
 }
 
 .programming-description {
@@ -388,6 +387,7 @@ footer {
 
 .article-image-select {
   width: 5.5rem;
+  aspect-ratio: 777/481;
   margin: 0 auto;
 }
 

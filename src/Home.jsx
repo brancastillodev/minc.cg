@@ -1,4 +1,5 @@
 import greetingsMsg from "./assets/home/greetings2.webp"
+import barA from "./assets/home/whiteBarAnimated.webm"
 import bar from "./assets/home/whiteBar@300x.webp"
 import leftCharacter from "./assets/home/characterLeft.webp"
 import rightCharacter from "./assets/home/characterRight.webp"
@@ -16,6 +17,10 @@ function Home() {
         <figure className="home-char-bar">
           <img src={bar}></img>
         </figure> 
+        {/* INTENTO DE PONER ANIMACIONES
+        <video autoPlay muted loop playsInline className="home-char-bar">
+          <source src={barA} type="video/webm"></source>
+        </video> */}
       </section>
       <figure className="home-figures figure-b">
           <img src={rightCharacter}></img>

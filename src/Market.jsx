@@ -43,7 +43,7 @@ function Market(){
         </Link>
       </section>
       {waiting ? 
-        <p className='simple-text waiting-msg'>Loading please wait...</p>  :
+        <p className='simple-text waiting-msg'>Loading, please wait...</p>  :
       <div className='market-div'>
         <section className="market">
           {allProducts.length > 0 && allProducts.map((e)=>(
