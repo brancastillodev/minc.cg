@@ -12,7 +12,7 @@ function VideoCard({videoData}){
         :<></>}
       </figure>
       
-      <figure className={videoData.doubleLine ? "video-card__title--double" : "video-card__title"}>
+      <figure className={videoData.doubleLine ? "video-card__title" : "video-card__title"}>
         <a href={videoData.link} target="_blank">
           <img src={videoData.title}/>
         </a>
