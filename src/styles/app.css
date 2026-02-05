@@ -314,12 +314,11 @@ footer {
 
 @media (min-width: 1000px) {
   .videos {
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
     grid-template-columns: repeat(3, 1fr);
-    padding: 0 4rem;
+    padding: 0 7rem;
     width: 100%;
-    row-gap: 2.5rem;
-    column-gap: 0rem;
+    row-gap: 2rem;
   }
   .video-card {
     gap: 0.5rem;
@@ -332,11 +331,10 @@ footer {
     width: 13rem;
   }
   .video-card__desc {
-    font-size: 0.8rem;
+    font-size: 0.85rem;
     width: 30ch;
     text-align: justify;
     text-align-last: center;
-    margin-top: 0rem;
   }
 }
 .content-title-text.programming-title {
