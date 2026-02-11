@@ -1,5 +1,6 @@
 import { useState } from "react"
 import greetingsMsg from "./assets/home/greetings-home.webp"
+import barPoster from "./assets/home/whiteBar@300x.webp"
 import bar from "./assets/home/mobileHomeV4.webm"
 import barMob from "./assets/home/mobileHomeV4-1.mov"
 import leftCharacter from "./assets/home/DTLadyOri.webm"
