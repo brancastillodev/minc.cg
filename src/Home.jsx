@@ -26,7 +26,7 @@ function Home() {
         {isMobile 
         ?
         <div className="home-animated-bar">
-          <video loop muted autoPlay playsInline preload="auto">
+          <video loop muted autoPlay playsInline>
             <source src={barMob} type="video/quicktime"/>
             Your browser doesn't support animations :,
           </video>
