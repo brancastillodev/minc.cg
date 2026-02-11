@@ -17,20 +17,16 @@ function AboutUs(){
         <span className="">MINC</span></p>
         <p><span className="yellow">Also know as: </span> 
         <span className="">MINC.CG / M.INC</span></p>
-      </section>
-
-      <section className="simple-text about-us-services">
-        <p>Art & Design Studio . Observatory . Science Facility . Social Research Institute </p>
-        <p>Global Network . Documentation . Distribution . Programming .</p>
-      </section> */}
+      </section>*/}
 
       <figure className="about-us-page__naming">
         <img src={naming} alt="naming-of-creator"></img>
       </figure>
 
-      <figure className="about-us-page__description">
-        <img src={description} alt="description-about-us"></img>
-      </figure>
+       <section className="about-us-page__description">
+        <p>Art & Design Studio . Observatory . Science Facility . Social Research Institute </p>
+        <p>Global Network . Documentation . Distribution . Programming .</p>
+      </section> 
 
       <figure className="instagram-link">
         <a href="https://www.instagram.com/minc.cg/" target="_blank">

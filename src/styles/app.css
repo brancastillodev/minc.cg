@@ -151,12 +151,15 @@
 
 .greetings-message {
   width: 15.8rem;
-  margin-top: 11rem;
+  margin-top: 9rem;
 }
 
-.home-char-bar {
-  margin-top: 1.3rem;
-  width: 16rem;
+.home-animated-bar {
+  width: 15.8rem;
+  height: 10px;
+}
+.home-animated-bar video {
+  transform: translate(-37.5%, -35%) scale(0.33);
 }
 
 .home-figures {
@@ -180,23 +183,6 @@
   .greetings-message {
     margin-top: 1.6rem;
     width: 21rem;
-  }
-  .home-char-bar {
-    margin-top: 0rem;
-    width: 23rem;
-  }
-  .home-figures {
-    display: flex;
-    height: 31rem;
-    position: absolute;
-  }
-  .figure-a {
-    left: -4rem;
-    top: -0.5rem;
-  }
-  .figure-b {
-    right: -6rem;
-    top: 9rem;
   }
 }
 footer {
@@ -318,7 +304,8 @@ footer {
     grid-template-columns: repeat(3, 1fr);
     padding: 0 7rem;
     width: 100%;
-    row-gap: 2rem;
+    row-gap: 4rem;
+    column-gap: 3rem;
   }
   .video-card {
     gap: 0.5rem;
@@ -739,8 +726,9 @@ footer {
 .about-us-page__description {
   margin: 0 auto;
   margin-top: 1.2rem;
-  aspect-ratio: 3281/267;
-  width: 22.5rem;
+  text-align: center;
+  font-family: Arial;
+  font-size: 0.8rem;
 }
 
 .simple-text.about-us-services {

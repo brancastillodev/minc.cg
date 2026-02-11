@@ -1,30 +1,55 @@
-import greetingsMsg from "./assets/home/greetings2.webp"
-import barA from "./assets/home/whiteBarAnimated.webm"
-import bar from "./assets/home/whiteBar@300x.webp"
-import leftCharacter from "./assets/home/characterLeft.webp"
-import rightCharacter from "./assets/home/characterRight.webp"
+import { useState } from "react"
+import greetingsMsg from "./assets/home/greetings-home.webp"
+import bar from "./assets/home/mobileHomeV4.webm"
+import barMob from "./assets/home/mobileHomeV4-1.mov"
+import leftCharacter from "./assets/home/DTLadyOri.webm"
+import rightCharacter from "./assets/home/DTmanOri.webm"
 
 function Home() {
+  const [isMobile, setIsMobile] = useState(
+    window.matchMedia("(max-width: 1000px)").matches
+  );
+
   return(
     <main className="welcome-page">
-      <figure className="home-figures figure-a">
-          <img src={leftCharacter}></img>
-      </figure>
+      {console.log(isMobile)}
+      <div className="home-figures figure-a">
+        <video loop muted autoPlay>
+          <source src={leftCharacter} type="video/webm"/>
+          Your browser doesn't support animations :,
+        </video>
+      </div>
+
       <section className="greetings-section">
         <figure className="greetings-message">
           <img src={greetingsMsg}></img>
         </figure>
-        <figure className="home-char-bar">
-          <img src={bar}></img>
-        </figure> 
-        {/* INTENTO DE PONER ANIMACIONES
-        <video autoPlay muted loop playsInline className="home-char-bar">
-          <source src={barA} type="video/webm"></source>
-        </video> */}
+        {isMobile 
+        ?
+        <div className="home-animated-bar">
+          <video loop muted autoPlay playsInline>
+            <source src={barMob} type="video/quicktime"/>
+            Your browser doesn't support animations :,
+          </video>
+
+        </div>
+        : 
+        <div className="home-animated-bar">
+          <video loop muted autoPlay playsInline>
+            <source src={bar}c type="video/webm"/>
+            Your browser doesn't support animations :,
+          </video>
+        </div>
+        }
       </section>
-      <figure className="home-figures figure-b">
-          <img src={rightCharacter}></img>
-      </figure>
+      
+      <div className="home-figures figure-b">
+        <video loop muted autoPlay >
+          <source src={rightCharacter} type="video/webm"/>
+          Your browser doesn't support animations :,
+        </video>
+      </div>
+
     </main>
   )
 }
