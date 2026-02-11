@@ -1,6 +1,5 @@
 import { useState } from "react"
 import greetingsMsg from "./assets/home/greetings-home.webp"
-import barPoster from "./assets/home/whiteBar@300x.webp"
 import bar from "./assets/home/mobileHomeV4.webm"
 import barMob from "./assets/home/mobileHomeV4-1.mov"
 import leftCharacter from "./assets/home/DTLadyOri.webm"
@@ -13,12 +12,12 @@ function Home() {
 
   return(
     <main className="welcome-page">
-      <div className="home-figures figure-a">
+      {/* <div className="home-figures figure-a">
         <video loop muted autoPlay>
           <source src={leftCharacter} type="video/webm"/>
           Your browser doesn't support animations :,
         </video>
-      </div>
+      </div> */}
 
       <section className="greetings-section">
         <figure className="greetings-message">
@@ -43,12 +42,12 @@ function Home() {
         }
       </section>
       
-      <div className="home-figures figure-b">
+      {/* <div className="home-figures figure-b">
         <video loop muted autoPlay >
           <source src={rightCharacter} type="video/webm"/>
           Your browser doesn't support animations :,
         </video>
-      </div>
+      </div> */}
 
     </main>
   )
