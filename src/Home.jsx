@@ -12,7 +12,6 @@ function Home() {
 
   return(
     <main className="welcome-page">
-      {console.log(isMobile)}
       <div className="home-figures figure-a">
         <video loop muted autoPlay>
           <source src={leftCharacter} type="video/webm"/>
