@@ -2,8 +2,6 @@ import { useState } from "react"
 import greetingsMsg from "./assets/home/greetings-home.webp"
 import bar from "./assets/home/mobileHomeV4.webm"
 import barMob from "./assets/home/mobileHomeV4-1.mov"
-import leftCharacter from "./assets/home/DTLadyOri.webm"
-import rightCharacter from "./assets/home/DTmanOri.webm"
 
 function Home() {
   const [isMobile, setIsMobile] = useState(
@@ -35,7 +33,7 @@ function Home() {
         : 
         <div className="home-animated-bar">
           <video loop muted autoPlay playsInline>
-            <source src={bar}c type="video/webm"/>
+            <source src={bar} type="video/webm"/>
             Your browser doesn't support animations :,
           </video>
         </div>
