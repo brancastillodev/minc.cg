@@ -721,7 +721,7 @@ footer {
 
 .about-us-page__naming {
   margin-top: 1rem;
-  width: 16.2rem;
+  width: 17.2rem;
   aspect-ratio: 2485/488;
 }
 
@@ -730,7 +730,8 @@ footer {
   margin-top: 1.2rem;
   text-align: center;
   font-family: Arial;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
+  color: white;
 }
 
 .simple-text.about-us-services {
@@ -740,8 +741,8 @@ footer {
 }
 
 .instagram-link {
-  margin-top: 1.7rem;
-  width: 4.6rem;
+  margin-top: 1.8rem;
+  width: 4.9rem;
   margin-right: 0;
 }
 

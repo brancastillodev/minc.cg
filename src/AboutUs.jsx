@@ -9,7 +9,7 @@ function AboutUs(){
       <figure className="aboutus-world">
         <img src={globeIcon} loading="lazy" alt="Global reach icon" />
       </figure>
-{/* 
+      {/* 
       <section className="simple-text about-us-credits">
         <p><span className="yellow">Name: </span> 
         <span className="minc-title">CGC MINC</span></p>
