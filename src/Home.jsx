@@ -2,6 +2,8 @@ import { useState } from "react"
 import greetingsMsg from "./assets/home/greetings-home.webp"
 import bar from "./assets/home/mobileHomeV4.webm"
 import barMob from "./assets/home/mobileHomeV4-1.mov"
+import safariGirl from "./assets/home/safariGirl_VP9.webm"
+import safariBoy from "./assets/home/safariboy_VP9.webm"
 
 function Home() {
   const [isMobile, setIsMobile] = useState(
@@ -10,21 +12,23 @@ function Home() {
 
   return(
     <main className="welcome-page">
-      {/* <div className="home-figures figure-a">
-        <video loop muted autoPlay>
-          <source src={leftCharacter} type="video/webm"/>
+
+      <div className="figure-a"></div>
+      <div className="home-figures figure-a">
+        <video loop muted autoPlay loading="lazy">
+          <source src={safariGirl} type="video/webm"/>
           Your browser doesn't support animations :,
         </video>
-      </div> */}
+      </div>
 
       <section className="greetings-section">
-        <figure className="greetings-message">
+        <figure className="greetings-message" loading="lazy">
           <img src={greetingsMsg}></img>
         </figure>
         {isMobile 
         ?
         <div className="home-animated-bar">
-          <video loop muted autoPlay playsInline>
+          <video loop muted autoPlay playsInline loading="lazy">
             <source src={barMob} type="video/quicktime"/>
             Your browser doesn't support animations :,
           </video>
@@ -32,7 +36,7 @@ function Home() {
         </div>
         : 
         <div className="home-animated-bar">
-          <video loop muted autoPlay playsInline>
+          <video loop muted autoPlay playsInline loading="lazy">
             <source src={bar} type="video/webm"/>
             Your browser doesn't support animations :,
           </video>
@@ -40,12 +44,13 @@ function Home() {
         }
       </section>
       
-      {/* <div className="home-figures figure-b">
-        <video loop muted autoPlay >
-          <source src={rightCharacter} type="video/webm"/>
+      <div className="figure-b"></div>
+      <div className="home-figures">
+        <video loop muted autoPlay loading="lazy">
+          <source src={safariBoy} type="video/webm"/>
           Your browser doesn't support animations :,
         </video>
-      </div> */}
+      </div>
 
     </main>
   )

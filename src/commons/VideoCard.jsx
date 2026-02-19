@@ -1,4 +1,4 @@
-import nikeShoe from "../assets/videos/MT_shoe@300x.png"
+import nikeShoe from "../assets/videos/MT_shoe@300x.webp"
 
 function VideoCard({videoData}){
 

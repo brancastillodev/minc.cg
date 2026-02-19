@@ -1,18 +1,18 @@
-import img1 from "../assets/videos/InFluxChain@300x.png";
-import img2 from "../assets/videos/MT_image@300x.png";
-import img3 from "../assets/videos/sp_image@300x.png";
-import img4 from "../assets/videos/wk_image@300x.png";
-import img5 from "../assets/videos/biri_pic@300x.png";
-import img6 from "../assets/videos/oisc_image@300x.png";
-import img7 from "../assets/videos/pom_pic@300x.png";
+import img1 from "../assets/videos/InFluxChain@300x.webp";
+import img2 from "../assets/videos/MT_image@300x.webp";
+import img3 from "../assets/videos/sp_image@300x.webp";
+import img4 from "../assets/videos/wk_image@300x.webp";
+import img5 from "../assets/videos/biri_pic@300x.webp";
+import img6 from "../assets/videos/oisc_image@300x.webp";
+import img7 from "../assets/videos/pom_pic@300x.webp";
 
-import tit1 from "../assets/videos/inFlux_2.png";
-import tit2 from "../assets/videos/media.png";
-import tit3 from "../assets/videos/Sensory.png";
-import tit4 from "../assets/videos/knowledge.png";
-import tit5 from "../assets/videos/birindwa.png";
-import tit6 from "../assets/videos/OI_SC_1_2.png";
-import tit7 from "../assets/videos/ProductsOf.png";
+import tit1 from "../assets/videos/inFlux_2.webp";
+import tit2 from "../assets/videos/media.webp";
+import tit3 from "../assets/videos/Sensory.webp";
+import tit4 from "../assets/videos/knowledge.webp";
+import tit5 from "../assets/videos/birindwa.webp";
+import tit6 from "../assets/videos/OI_SC_1_2.webp";
+import tit7 from "../assets/videos/ProductsOf.webp";
 
 
 export const videos = [

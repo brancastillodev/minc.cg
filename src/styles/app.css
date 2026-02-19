@@ -186,6 +186,24 @@
   .home-animated-bar video {
     transform: translate(-33%, -40%) scale(0.45);
   }
+  .home-figures {
+    display: flex;
+  }
+  .figure-a {
+    position: absolute;
+  }
+  .figure-a video {
+    transform: translate(-80%, 4%) scale(0.7);
+  }
+  .fondo-a {
+    background-image: src("../as");
+  }
+  .figure-b {
+    position: absolute;
+  }
+  .figure-b video {
+    transform: translate(90%, 23%) scale(0.7);
+  }
 }
 footer {
   display: flex;
