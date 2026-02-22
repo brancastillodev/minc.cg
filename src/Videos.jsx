@@ -1,6 +1,6 @@
 import VideoCard from './commons/VideoCard.jsx'
 import videos from "./utils/videos.js"
-import videoTit from "./assets/videos/title.png"
+import videoTit from "./assets/videos/title.webp"
 
 function Videos() {
   return (
@@ -9,11 +9,11 @@ function Videos() {
         <img src={videoTit} alt="video-title" />
       </figure>
 
-      <section className="videos">
+      {/* <section className="videos">
        {videos.map((e)=>(
           <VideoCard videoData={e} />
        ))}
-      </section>
+      </section> */}
     </main>
   )
 }
