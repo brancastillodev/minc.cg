@@ -346,7 +346,7 @@ footer {
     height: 7rem;
   }
   .video-card__title {
-    width: 13rem;
+    width: 12rem;
   }
   .video-card__desc {
     font-size: 0.85rem;
@@ -371,14 +371,14 @@ footer {
 }
 
 .articles-menu-grid {
-  margin-top: 3.3rem;
+  margin-top: 6rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 3rem;
+  gap: 1.2rem;
   width: 100%;
   height: 10rem;
   padding: 0 1rem;
-  margin-bottom: 4rem;
+  margin-bottom: 2rem;
 }
 
 .article-image-select {
@@ -481,13 +481,16 @@ footer {
     margin-top: 0.7rem;
     width: 24rem;
   }
-  .programming-image {
-    width: 5rem;
+  .programming-video {
+    margin-top: 0.5rem;
+  }
+  .programming-video video {
+    width: 6rem;
   }
   .articles-menu-grid {
-    width: 50%;
-    margin-top: 4rem;
-    gap: 5rem;
+    width: 65%;
+    margin-top: 3rem;
+    gap: 2rem;
     padding: 0;
     margin-bottom: 1rem;
     height: auto;
@@ -503,7 +506,7 @@ footer {
     width: 32ch;
   }
   .article-description-select p {
-    font-size: 0.9rem;
+    font-size: 0.93rem;
   }
   .article {
     width: 60%;
@@ -784,21 +787,15 @@ footer {
   .about-us-page__video video {
     width: 5.5rem;
   }
-  .simple-text.about-us-services {
-    margin: 0 auto;
-    margin-top: 2rem;
-    font-size: 0.85rem;
-  }
   .about-us-page__naming {
     margin-top: 1rem;
-    width: 21rem;
+    width: 23rem;
     aspect-ratio: 2485/488;
   }
   .about-us-page__description {
     margin: 0 auto;
     margin-top: 1.2rem;
-    aspect-ratio: 3281/267;
-    width: 29rem;
+    font-size: 0.85rem;
   }
   .instagram-link {
     margin-left: 0;
