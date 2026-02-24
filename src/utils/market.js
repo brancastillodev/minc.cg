@@ -1,4 +1,3 @@
-
 export const market = [
   {title: `DONCARE (AFGK) "Puffer Leather Jacket"`,
     size: "Large",

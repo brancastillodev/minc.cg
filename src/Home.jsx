@@ -2,7 +2,7 @@ import greetingsMsg from "./assets/home/greetings-home.webp"
 import bar from "./assets/home/mobileHomeV4.webm"
 import barMob from "./assets/home/mobileHomeV4-1.mov"
 import safariGirl from "./assets/home/safariGirl_VP9.webm"
-import safariBoy from "./assets/home/safariboy_VP9.webm"
+import safariBoy from "./assets/home/safariBoy_VP9.webm"
 
 function Home() {
 
@@ -27,8 +27,8 @@ function Home() {
           </video>
         </div>
       </section>
-
-      {/* <div className="home-figures figure-b">
+{/* 
+      <div className="home-figures figure-b">
         <video loop muted autoPlay loading="lazy">
           <source src={safariBoy} type="video/webm"/>
           Your browser doesn't support animations :,

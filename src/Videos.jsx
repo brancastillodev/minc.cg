@@ -9,11 +9,11 @@ function Videos() {
         <img src={videoTit} alt="video-title" />
       </figure>
 
-      {/* <section className="videos">
+      <section className="videos">
        {videos.map((e)=>(
           <VideoCard videoData={e} />
        ))}
-      </section> */}
+      </section>
     </main>
   )
 }

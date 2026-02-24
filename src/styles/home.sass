@@ -1,5 +1,6 @@
 .welcome-page
-  margin: 0 auto
+  display: flex
+  justify-content: center
   
 .greetings-message
   width: 15.8rem
@@ -19,8 +20,8 @@
   .welcome-page
     width: 100%
     position: relative
-    align-items: center
-    justify-content: center
+    align-items: center //alinea verticalmente
+    justify-content: center //alinea horizontalmente
 
   .greetings-message
     margin-top: 1.6rem
@@ -35,17 +36,20 @@
     
   .home-figures
     // position: relative
-    display: flex
+    // display: flex
 
   .figure-a
-    position: absolute
+    // position: absolute
     video
       transform: translate(-80%, 4%)  scale(0.7)
 
   .fondo-a
-    background-image: src("../as")
+    // background-image: url("../src/assets/home/star-girl.png")
 
   .figure-b
-    position: absolute
+    // position: absolute
     video
       transform: translate(90%, 23%)  scale(0.7)
+
+  .fondo-b
+    // background-image: url("../src/assets/home/star-boy.png")

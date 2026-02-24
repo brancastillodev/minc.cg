@@ -29,7 +29,7 @@ function Programming(){
             <Link key={e.id} to={`/programming/${e.slug}`}>
               <figure className="article-title-select">
                 <img src={e.titleSelected} alt="union-black-flag" />
-              </figure> 
+              </figure>
             </Link>
             
             <div className="simple-text article-description-select">{

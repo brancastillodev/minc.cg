@@ -22,7 +22,6 @@ import vidPcMob from "../assets/videos/vidPcMob.mov";
 import vidShoeDes from "../assets/videos/vidShoeDes.webm";
 import vidShoeMob from "../assets/videos/vidShoeMob.mov";
 
-
 export const videos = [
   {
     anime: true,
