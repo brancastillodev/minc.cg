@@ -298,6 +298,11 @@ footer {
   align-items: center;
 }
 
+.video-card__image_div {
+  heigh: 4rem;
+  width: 4rem;
+}
+
 .video-card__image {
   height: 4rem;
   width: 4rem;
@@ -306,23 +311,8 @@ footer {
   object-fit: contain;
 }
 
-.video-card:nth-child(2) .video-card__image {
-  position: relative;
-}
-
-.shoe-div {
-  position: absolute;
-  top: 0;
-  left: 0;
-  transform: translate(-40%, -40%) scale(0.15);
-}
-
-.zapatito {
-  position: absolute;
-  width: 2.1rem;
-  top: 60%;
-  left: 65%;
-  transform: translate(-50%, -50%);
+.video-card__video video {
+  width: 4rem;
 }
 
 .video-card__title {
@@ -352,14 +342,12 @@ footer {
     gap: 0.5rem;
   }
   .video-card__image {
-    width: 10rem;
+    width: 9rem;
     height: 7rem;
   }
-  .shoe-div-desktop {
-    position: absolute;
-    top: 0;
-    left: 0;
-    transform: translate(-37%, -42%) scale(0.15);
+  .video-card__video video {
+    width: 9rem;
+    height: 7rem;
   }
   .video-card__title {
     width: 13rem;

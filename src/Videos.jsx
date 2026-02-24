@@ -1,6 +1,6 @@
-import VideoCard from './commons/VideoCard.jsx'
-import videos from "./utils/videos.js"
 import videoTit from "./assets/videos/title.webp"
+import videos from "./utils/videos.js"
+import VideoCard from './commons/VideoCard.jsx'
 
 function Videos() {
   return (

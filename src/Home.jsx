@@ -17,7 +17,7 @@ function Home() {
           <img src={starGirl} alt="star-for-characters" loading="lazy" />
         </figure>
         <div className="home-figures figure-a">
-          <video loop muted autoPlay loading="lazy">
+          <video loop muted autoPlay playsInline loading="lazy">
             <source src={safariGirl} type="video/webm"/>
           </video>
         </div>
@@ -40,7 +40,7 @@ function Home() {
           <img src={starBoy} alt="star-for-characters" loading="lazy" />
         </figure>
         <div className="home-figures figure-b">
-          <video loop muted autoPlay loading="lazy">
+          <video loop muted autoPlay playsInline loading="lazy">
             <source src={safariBoy} type="video/webm"/>
           </video>
         </div>
