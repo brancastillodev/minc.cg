@@ -3,6 +3,8 @@ import bar from "./assets/home/mobileHomeV4.webm"
 import barMob from "./assets/home/mobileHomeV4-1.mov"
 import safariGirl from "./assets/home/safariGirl_VP9.webm"
 import safariBoy from "./assets/home/safariBoy_VP9.webm"
+import starGirl from "./assets/home/star-girl.png"
+import starBoy from "./assets/home/star-boy.png"
 
 
 function Home() {
@@ -11,6 +13,9 @@ function Home() {
     <main className="welcome-page">
 
       <div className="figures-contenedor">
+        <figure className="fondo-a">
+          <img src={starGirl} alt="star-for-characters" loading="lazy" />
+        </figure>
         <div className="home-figures figure-a">
           <video loop muted autoPlay loading="lazy">
             <source src={safariGirl} type="video/webm"/>
@@ -31,6 +36,9 @@ function Home() {
       </section>
 
       <div className="figures-contenedor">
+        <figure className="fondo-b">
+          <img src={starBoy} alt="star-for-characters" loading="lazy" />
+        </figure>
         <div className="home-figures figure-b">
           <video loop muted autoPlay loading="lazy">
             <source src={safariBoy} type="video/webm"/>

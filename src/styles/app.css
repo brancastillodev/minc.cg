@@ -185,24 +185,36 @@
   }
   .figures-contenedor {
     position: relative;
-    border: 1px solid red;
     flex: 1;
     height: 500px;
   }
+  .figures-contenedor figure {
+    position: absolute;
+    width: 450px;
+  }
   .home-figures {
-    border: 1px solid green;
     position: absolute;
     display: flex;
-    width: 200px;
+    width: 220px;
     aspect-ratio: 1/1;
   }
   .figure-a {
-    top: 50px;
-    left: 50px;
+    top: 75px;
+    left: 55px;
+  }
+  .fondo-a {
+    aspect-ratio: 660/674;
+    top: -20px;
+    left: -50px;
   }
   .figure-b {
-    bottom: 50px;
-    right: 50px;
+    bottom: 30px;
+    right: 25px;
+  }
+  .fondo-b {
+    aspect-ratio: 626/652;
+    bottom: -90px;
+    right: -70px;
   }
 }
 footer {
