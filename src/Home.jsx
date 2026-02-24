@@ -4,17 +4,17 @@ import barMob from "./assets/home/mobileHomeV4-1.mov"
 import safariGirl from "./assets/home/safariGirl_VP9.webm"
 import safariBoy from "./assets/home/safariBoy_VP9.webm"
 
+
 function Home() {
 
   return(
     <main className="welcome-page">
 
-      {/* <div className="home-figures figure-a">
+      <div className="home-figures figure-a">
         <video loop muted autoPlay loading="lazy">
           <source src={safariGirl} type="video/webm"/>
-          Your browser doesn't support animations :,
         </video>
-      </div> */}
+      </div>
 
       <section className="greetings-section">
         <figure className="greetings-message" loading="lazy">
@@ -27,13 +27,12 @@ function Home() {
           </video>
         </div>
       </section>
-{/* 
+
       <div className="home-figures figure-b">
         <video loop muted autoPlay loading="lazy">
           <source src={safariBoy} type="video/webm"/>
-          Your browser doesn't support animations :,
         </video>
-      </div> */}
+      </div>
 
     </main>
   )

@@ -170,7 +170,6 @@
 
 @media (min-width: 1000px) {
   .welcome-page {
-    width: 100%;
     position: relative;
     align-items: center;
     justify-content: center;
@@ -187,11 +186,11 @@
   .home-animated-bar video {
     transform: translate(-33%, -40%) scale(0.45);
   }
-  .figure-a video {
-    transform: translate(-80%, 4%) scale(0.7);
-  }
-  .figure-b video {
-    transform: translate(90%, 23%) scale(0.7);
+  .home-figures {
+    border: 1px solid red;
+    display: flex;
+    height: 200px;
+    width: 200px;
   }
 }
 footer {
