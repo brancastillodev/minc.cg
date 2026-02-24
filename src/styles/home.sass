@@ -1,5 +1,4 @@
 .welcome-page
-  display: flex
   justify-content: center
   
 .greetings-message
@@ -18,9 +17,8 @@
 
 @media (min-width: 1000px)
   .welcome-page
-    position: relative
     align-items: center //alinea verticalmente
-    justify-content: center //alinea horizontalmente
+    // position: relative
 
   .greetings-message
     margin-top: 1.6rem
@@ -33,16 +31,27 @@
     video
       transform: translate(-33%, -40%)  scale(0.45)
     
-  .home-figures
+  .figures-contenedor
+    position: relative
     border: 1px solid red
+    flex: 1
+    height: 500px
+
+  .home-figures
+    border: 1px solid green
+    position: absolute
     display: flex
-    height: 200px
     width: 200px
+    aspect-ratio: 1 /1
 
   .figure-a
+    top: 50px
+    left: 50px
     
-    
-    
+  .figure-b
+    bottom: 50px
+    right:50px
+
     // video
       // transform: scale(0.7)
       // transform-origin: center
@@ -50,7 +59,6 @@
   .fondo-a
     // background-image: url("../src/assets/home/star-girl.png")
 
-  .figure-b
     // position: absolute
     // video
       // transform:  scale(0.7)

@@ -10,10 +10,12 @@ function Home() {
   return(
     <main className="welcome-page">
 
-      <div className="home-figures figure-a">
-        <video loop muted autoPlay loading="lazy">
-          <source src={safariGirl} type="video/webm"/>
-        </video>
+      <div className="figures-contenedor">
+        <div className="home-figures figure-a">
+          <video loop muted autoPlay loading="lazy">
+            <source src={safariGirl} type="video/webm"/>
+          </video>
+        </div>
       </div>
 
       <section className="greetings-section">
@@ -28,10 +30,12 @@ function Home() {
         </div>
       </section>
 
-      <div className="home-figures figure-b">
-        <video loop muted autoPlay loading="lazy">
-          <source src={safariBoy} type="video/webm"/>
-        </video>
+      <div className="figures-contenedor">
+        <div className="home-figures figure-b">
+          <video loop muted autoPlay loading="lazy">
+            <source src={safariBoy} type="video/webm"/>
+          </video>
+        </div>
       </div>
 
     </main>
