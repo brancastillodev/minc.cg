@@ -2,7 +2,9 @@ import { Link } from "react-router-dom"
 import {programming} from "./utils/programming"
 import programTitle from "./assets/programming/programTitle.png"
 import introProgam from "./assets/programming/BoxNewVersion.png"
-import globe from "./assets/programming/globe.webp"
+// import globe from "./assets/programming/globe.webp"
+import globe from "../src/assets/logo/DTbadge_VP9.webm"
+import globeMob from "../src/assets/logo/badge-1.mov"
 
 function Programming(){
   return(
@@ -15,9 +17,12 @@ function Programming(){
         <img src={introProgam} alt="market-title" />
       </figure>
 
-      <figure className="programming-image">
-        <img src={globe} loading="lazy" alt="globe-icon"x/>
-      </figure>
+      <div className="programming-video">
+        <video loop muted autoPlay playsInline loading="lazy">
+          <source src={globeMob} type='video/mp4; codecs="hvc1"'/>
+          <source src={globe} type="video/webm"/>
+        </video>
+      </div>
 
       <div className="articles-menu-grid">
         {programming.map(e =>(
