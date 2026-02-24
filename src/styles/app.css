@@ -308,6 +308,7 @@ footer {
 
 .video-card__video video {
   width: 4rem;
+  height: 4rem;
 }
 
 .video-card__title {
@@ -373,7 +374,7 @@ footer {
   margin-top: 3.3rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 1.2rem;
+  gap: 3rem;
   width: 100%;
   height: 10rem;
   padding: 0 1rem;
@@ -721,12 +722,12 @@ footer {
   padding: 0 2rem;
 }
 
-.aboutus-world {
+.about-us-page__video {
   margin: 0 auto;
-  margin-top: 4rem;
-  width: 4rem;
+}
+.about-us-page__video video {
   aspect-ratio: 1/1;
-  margin-bottom: 1rem;
+  width: 4rem;
 }
 
 .minc-title {
@@ -780,10 +781,8 @@ footer {
     margin: 0 auto;
     margin-top: 1rem;
   }
-  .aboutus-world {
-    margin-top: 0rem;
-    width: 5rem;
-    aspect-ratio: 1/1;
+  .about-us-page__video video {
+    width: 5.5rem;
   }
   .simple-text.about-us-services {
     margin: 0 auto;

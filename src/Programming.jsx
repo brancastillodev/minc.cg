@@ -2,7 +2,6 @@ import { Link } from "react-router-dom"
 import {programming} from "./utils/programming"
 import programTitle from "./assets/programming/programTitle.png"
 import introProgam from "./assets/programming/BoxNewVersion.png"
-// import globe from "./assets/programming/globe.webp"
 import globe from "../src/assets/logo/DTbadge_VP9.webm"
 import globeMob from "../src/assets/logo/badge-1.mov"
 

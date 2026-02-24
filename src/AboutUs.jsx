@@ -1,23 +1,17 @@
 import instagramIcon from "./assets/aboutus/instagram.png";
-import globeIcon from "./assets/aboutus/globe.png";
-import description from "./assets/aboutus/descriptionFixed.png"
+import globe from "../src/assets/logo/DTbadge_VP9.webm"
+import globeMob from "../src/assets/logo/badge-1.mov"
 import naming from "./assets/aboutus/namingFixed.png"
 
 function AboutUs(){
   return (
     <main className="content-page about-us-page">
-      <figure className="aboutus-world">
-        <img src={globeIcon} loading="lazy" alt="Global reach icon" />
-      </figure>
-      {/* 
-      <section className="simple-text about-us-credits">
-        <p><span className="yellow">Name: </span> 
-        <span className="minc-title">CGC MINC</span></p>
-        <p><span className="yellow">Know as: </span> 
-        <span className="">MINC</span></p>
-        <p><span className="yellow">Also know as: </span> 
-        <span className="">MINC.CG / M.INC</span></p>
-      </section>*/}
+      <div className="about-us-page__video">
+        <video loop muted autoPlay playsInline loading="lazy">
+          <source src={globeMob} type='video/mp4; codecs="hvc1"'/>
+          <source src={globe} type="video/webm"/>
+        </video>
+      </div>
 
       <figure className="about-us-page__naming">
         <img src={naming} alt="naming-of-creator"></img>
