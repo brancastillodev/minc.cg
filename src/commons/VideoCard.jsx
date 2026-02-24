@@ -10,11 +10,10 @@ function VideoCard({videoData}){
             <source src={videoData.vidD} type="video/webm"/>
           </video>
         </div> :
-        <div className="video-card__image_div">
-          <figure className="video-card__image">
-            <img src={videoData.image} loading="lazy" />
-          </figure>
-        </div>
+        
+        <figure className="video-card__image">
+          <img src={videoData.image} loading="lazy" />
+        </figure>
       }
 
       <figure className={videoData.doubleLine ? "video-card__title" : "video-card__title"}>
