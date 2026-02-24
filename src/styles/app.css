@@ -199,24 +199,24 @@
     width: 220px;
     aspect-ratio: 1/1;
   }
-  .figure-a {
-    top: 50px;
-    left: 47px;
-  }
   .fondo-a {
     aspect-ratio: 660/674;
     top: -45px;
     left: -50px;
   }
-  .figure-b {
-    width: 200px;
-    bottom: -50px;
-    right: 25px;
+  .figure-a {
+    top: 50px;
+    left: 47px;
   }
   .fondo-b {
     aspect-ratio: 626/652;
     bottom: -180px;
     right: -70px;
+  }
+  .figure-b {
+    width: 200px;
+    bottom: -50px;
+    right: 25px;
   }
 }
 footer {
