@@ -163,7 +163,7 @@
   transform: translate(-37.5%, -35%) scale(0.33);
 }
 
-.home-figures {
+.home-figures, .figures-contenedor {
   display: none;
 }
 
@@ -184,6 +184,7 @@
     transform: translate(-33%, -40%) scale(0.45);
   }
   .figures-contenedor {
+    display: flex;
     position: relative;
     flex: 1;
     height: 350px;
