@@ -1,12 +1,12 @@
 import './styles/app.css'
 import { Routes, Route } from 'react-router-dom';
-import Navbar from './commponets/Navbar';
-import Footer from './commponets/Footer';
-import Home from './commponets/Home';
-import Videos from './commponets/Videos'
-import Programming from './commponets/Programming'
-import Market from './commponets/Market'
-import AboutUs from './commponets/AboutUs'
+import Navbar from './componets/Navbar';
+import Footer from './componets/Footer';
+import Home from './componets/Home';
+import Videos from './componets/Videos'
+import Programming from './componets/Programming'
+import Market from './componets/Market'
+import AboutUs from './componets/AboutUs'
 import ArticleCard from './commons/ArticleCard';
 import { useLocation } from 'react-router-dom';
 
