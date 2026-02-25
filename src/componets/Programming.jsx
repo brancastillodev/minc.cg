@@ -9,11 +9,11 @@ function Programming(){
   return(
     <main className="content-page">
       <figure className="content-title-text programming-title">
-        <img src={programTitle} alt="programming-title" />
+        <img src={programTitle} />
       </figure>
 
       <figure className="programming-description">
-        <img src={introProgam} alt="market-title" />
+        <img src={introProgam}  />
       </figure>
 
       <div className="programming-video">
@@ -27,12 +27,12 @@ function Programming(){
         {programming.map(e =>(
           <div className="articles-menu-one-option" key={e.id}>
             <figure className="article-image-select">
-              <img src={e.image} alt="union-black-flag" />
+              <img src={e.image}  />
             </figure> 
 
             <Link key={e.id} to={`/programming/${e.slug}`}>
               <figure className="article-title-select">
-                <img src={e.titleSelected} alt="union-black-flag" />
+                <img src={e.titleSelected}  />
               </figure>
             </Link>
             

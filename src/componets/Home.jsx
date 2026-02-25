@@ -14,7 +14,7 @@ function Home() {
 
       <div className="figures-contenedor">
         <figure className="fondo-a">
-          <img src={starGirl} alt="star-for-characters" loading="lazy" />
+          <img src={starGirl}  loading="lazy" />
         </figure>
         <div className="home-figures figure-a">
           <video loop muted autoPlay playsInline loading="lazy">
@@ -37,7 +37,7 @@ function Home() {
 
       <div className="figures-contenedor">
         <figure className="fondo-b">
-          <img src={starBoy} alt="star-for-characters" loading="lazy" />
+          <img src={starBoy} loading="lazy" />
         </figure>
         <div className="home-figures figure-b">
           <video loop muted autoPlay playsInline loading="lazy">

@@ -19,7 +19,7 @@ function Navbar() {
       <>
         <nav className='navbar'>
           <Link to="/" className='navbar-logotipo' onClick={()=>setExtraMenu(false)}>
-              <img src={logo} alt='cgcminic-logo'></img>
+              <img src={logo}></img>
           </Link>
           
           {/* MENU DESKTOP */}
