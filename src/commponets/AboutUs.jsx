@@ -1,7 +1,7 @@
-import instagramIcon from "./assets/aboutus/instagram.png";
-import globe from "../src/assets/logo/DTbadge_VP9.webm"
-import globeMob from "../src/assets/logo/badge-1.mov"
-import naming from "./assets/aboutus/namingFixed.png"
+import instagramIcon from "../assets/aboutus/instagram.png";
+import globe from "../assets/logo/DTbadge_VP9.webm"
+import globeMob from "../assets/logo/badge-1.mov"
+import naming from "../assets/aboutus/namingFixed.png"
 
 function AboutUs(){
   return (

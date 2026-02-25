@@ -1,10 +1,10 @@
-import greetingsMsg from "./assets/home/greetings-home.webp"
-import bar from "./assets/home/mobileHomeV4.webm"
-import barMob from "./assets/home/mobileHomeV4-1.mov"
-import safariGirl from "./assets/home/safariGirl_VP9.webm"
-import safariBoy from "./assets/home/safariBoy_VP9.webm"
-import starGirl from "./assets/home/star-girl.png"
-import starBoy from "./assets/home/star-boy.png"
+import greetingsMsg from "../assets/home/greetings-home.webp"
+import bar from "../assets/home/mobileHomeV4.webm"
+import barMob from "../assets/home/mobileHomeV4-1.mov"
+import safariGirl from "../assets/home/safariGirl_VP9.webm"
+import safariBoy from "../assets/home/safariBoy_VP9.webm"
+import starGirl from "../assets/home/star-girl.png"
+import starBoy from "../assets/home/star-boy.png"
 
 
 function Home() {

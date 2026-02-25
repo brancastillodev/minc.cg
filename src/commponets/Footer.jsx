@@ -1,6 +1,6 @@
-import aboutUs from "./assets/home/aboutUsText.png"
-import menuBox from "./assets/buttons/oneBoxShadow.png"
-import menuBoxSel from "./assets/buttons/menuBoxesShadowSel.png"
+import aboutUs from "../assets/home/aboutUsText.png"
+import menuBox from "../assets/buttons/oneBoxShadow.png"
+import menuBoxSel from "../assets/buttons/menuBoxesShadowSel.png"
 import { Link, useLocation } from "react-router-dom"
 
 function Footer() {

@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react'
-import ItemCard from './commons/ItemCard.jsx'
-import marketTitle from "./assets/market/marketTitle.png"
-import descriptionBox from "./assets/market/descriptBox.png"
-import viewCart from "./assets/market/viewCart.png"
+import ItemCard from '../commons/ItemCard.jsx'
+import marketTitle from "../assets/market/marketTitle.png"
+import descriptionBox from "../assets/market/descriptBox.png"
+import viewCart from "../assets/market/viewCart.png"
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 

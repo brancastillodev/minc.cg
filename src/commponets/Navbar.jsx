@@ -1,15 +1,15 @@
-import logo from "./assets/logo/CGCmincLogo.webp"
 import { useState} from "react";
 import { Link } from "react-router-dom";
-import menuButton from "./assets/buttons/menuBttn@300x.png"
-import menuLine from "./assets/buttons/menuLine.svg"
-import pButton from "./assets/buttons/proBttn@300x.png"
-import vButton from "./assets/buttons/VidBttn@300x.png"
-import mButton from "./assets/buttons/markBttn@300x.png"
-import newButton from "./assets/buttons/new@300x.png"
-import menuBar from "./assets/buttons/menuBar.png"
-import menuBox from "./assets/buttons/oneBoxShadow.png"
-import menuBoxSel from "./assets/buttons/menuBoxesShadowSel.png"
+import logo from "../assets/logo/CGCmincLogo.webp"
+import menuButton from "../assets/buttons/menuBttn@300x.png"
+import menuLine from "../assets/buttons/menuLine.svg"
+import pButton from "../assets/buttons/proBttn@300x.png"
+import vButton from "../assets/buttons/VidBttn@300x.png"
+import mButton from "../assets/buttons/markBttn@300x.png"
+import newButton from "../assets/buttons/new@300x.png"
+import menuBar from "../assets/buttons/menuBar.png"
+import menuBox from "../assets/buttons/oneBoxShadow.png"
+import menuBoxSel from "../assets/buttons/menuBoxesShadowSel.png"
 
 
 function Navbar() {
