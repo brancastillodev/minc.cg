@@ -1,9 +1,9 @@
 # minc.cg
 
-Professional website developed for **CGC Minc**, translating a professional UI/UX design into a fully functional web application using **React, Sass, and HTML**.
+Professional website developed for **minc-cg**, translating a professional UI/UX design into a fully functional web application using **React, Sass, and HTML**.
 
-🔗 **Live Demo:** https://minc-cg.vercel.app/  
-🔗 **Repository:** https://github.com/pibelanzallamas/minc.cg
+🔗 **Live Demo:** https://minc-cg.com/  
+🔗 **Video Demo:** https://youtu.be/d4GrGDv77K4
 
 ## 🧠 Project Overview
 
@@ -95,13 +95,9 @@ Run the development server:
 Front-End Developer  
 Buenos Aires, Argentina  
 
-- GitHub: https://github.com/pibelanzallamas
-
 **Daniel Aziah**  
 Ux/Ui Design  
 London, England
-
-- Instagram: https://www.instagram.com/aziah.daniel/
 
 ## 📄 License
 
