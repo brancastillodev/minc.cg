@@ -167,7 +167,7 @@
   display: none;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   .welcome-page {
     align-items: center;
   }
@@ -217,6 +217,17 @@
     width: 200px;
     bottom: -50px;
     right: 25px;
+  }
+}
+@media (min-width: 1920px) {
+  .greetings-message {
+    width: 23.8rem;
+  }
+  .home-animated-bar video {
+    transform: translate(-31.3%, -35%) scale(0.55);
+  }
+  .figures-contenedor {
+    height: 700px;
   }
 }
 footer {
