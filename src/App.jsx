@@ -8,6 +8,7 @@ import Programming from './componets/Programming'
 import Market from './componets/Market'
 import AboutUs from './componets/AboutUs'
 import ArticleCard from './commons/ArticleCard';
+import ProductPage from './commons/ProductPage';
 import { useLocation } from 'react-router-dom';
 
 function App() {
@@ -29,6 +30,7 @@ function App() {
         <Route path="/programming" element={<Programming/>}/>
         <Route path="/videos" element={<Videos />} />
         <Route path="/market" element={<Market/>}/>
+        <Route path="/market/:id" element={<ProductPage />} />
         <Route path="/about-us" element={<AboutUs/>}/>
       </Routes>
       <Footer/>

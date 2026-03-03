@@ -590,6 +590,14 @@ footer {
   aspect-ratio: 513/665;
 }
 
+.item-card__link {
+  text-decoration: none;
+  color: inherit;
+}
+.item-card__link :hover {
+  opacity: 0.6;
+}
+
 .item-title {
   width: 4.8rem;
   font-size: 0.6rem;
