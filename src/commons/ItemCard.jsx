@@ -9,7 +9,7 @@ function ItemCard({itemData}){
     <div className="item-card">
       <figure className="item-image"><img src={itemData.image}/></figure>
       
-      <Link state={{ itemData }}  className="item-card__link" to={`/market${itemData.id}`}>
+      <Link state={{ itemData }}  className="item-card__link" to={`/market/${itemData.id}`}>
         <p className="item-title">{itemData.title}</p>
       </Link>
 
