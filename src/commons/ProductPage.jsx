@@ -1,16 +1,13 @@
 import { useEffect, useState } from "react";
+import axios from "axios";
 import { useLocation, useParams } from "react-router-dom";
 
 function ProductPage(){
-  const location = useLocation();
-  const [product, setProduct] = useState(location.state?.product || null);
   const { id } = useParams();
+  const location = useLocation();
+  const [product, setProduct] = useState(location.state?.itemData || null);
   const [waiting, setWaiting] = useState(true);
   
-
-  console.log(id)
-  console.log(product)
-
   useEffect(() => {
     async function fetchProduct(){
       if(!product){
@@ -21,6 +18,8 @@ function ProductPage(){
         } catch (error) {
           console.error("Error fetching products:", error);
         }
+      }else{
+        setWaiting(false)
       }
     }
     fetchProduct()
@@ -32,7 +31,7 @@ function ProductPage(){
     {waiting ? 
         <p className='simple-text waiting-msg'>Loading, please wait...</p>  :
       <div className=''>
-        {/* <p>{product.title}</p> */}
+        <p>{product.title}</p>
       </div>
       }
     </main>
