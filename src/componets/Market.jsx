@@ -46,8 +46,8 @@ function Market(){
         <p className='simple-text waiting-msg'>Loading, please wait...</p>  :
       <div className='market-div'>
         <section className="market">
-          {allProducts.length > 0 && allProducts.map((e)=>(
-            <ItemCard itemData={e} />
+          {allProducts.length > 0 && allProducts.map((e, i)=>(
+            <ItemCard key={i} itemData={e} />
           ))}
         </section>
       </div>
