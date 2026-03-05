@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useLocation, useParams } from "react-router-dom";
 import viewCart from "../assets/market/viewCart.png"
+import addToCart from "../assets/market/addToCart2.png"
 import leftArrow from "../assets/programming/leftArrow.png";
 import rightArrow from "../assets/programming/rightArrow.png";
 
@@ -58,6 +59,9 @@ function ProductPage(){
             <img src={rightArrow}></img>
           </figure>
         </div>
+        <figure className="add-to-cart-btn">
+          <img src={addToCart} alt={"add to cart button"}></img>
+        </figure>
       </section> 
       }
     </main>

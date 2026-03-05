@@ -10,9 +10,11 @@ import AboutUs from './componets/AboutUs'
 import ArticleCard from './commons/ArticleCard';
 import ProductPage from './commons/ProductPage';
 import { useLocation } from 'react-router-dom';
+import { useEffect, useState } from 'react';
 
 function App() {
   const location = useLocation();
+  const [footer, setFooter] = useState(true)
 
   const isArticlePage = (
       location.pathname.startsWith('/programming/') && 
@@ -20,6 +22,12 @@ function App() {
   ) || (
       location.pathname == '/market'
   )
+
+  useEffect(()=>{
+    if(location.pathname.startsWith("/market/")){
+      setFooter(false)
+    }
+  },[location])
 
   return (
     <div className={isArticlePage ? "wraper article-wrap" :'wraper'}>
@@ -33,7 +41,7 @@ function App() {
         <Route path="/market/:id" element={<ProductPage />} />
         <Route path="/about-us" element={<AboutUs/>}/>
       </Routes>
-      <Footer/>
+      {footer && <Footer/>}
     </div>
   )
 }

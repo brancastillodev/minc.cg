@@ -839,6 +839,69 @@ footer {
 
 .product-card__title {
   width: 18ch;
+  font-family: "Arial";
+  color: white;
+}
+
+.product-card__kart {
+  width: 5rem;
+  margin-right: 2rem;
+}
+
+.product-card__image {
+  width: 110%;
+}
+
+.product-card__bottom {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-card__price {
+  text-align: center;
+  font-family: Questiora, VCR OSD Mono;
+  color: #FEF001;
+  text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.8);
+  font-size: 1.4rem;
+}
+
+.product-card__arrows {
+  display: flex;
+  justify-content: center;
+  gap: 14rem;
+}
+.product-card__arrows figure {
+  cursor: pointer;
+  width: 2.5rem;
+}
+
+.add-to-cart-btn {
+  margin: 0 auto;
+  margin-top: -0.5rem;
+  width: 5rem;
+  cursor: pointer;
+}
+
+@media (min-width: 1000px) {
+  .product-card {
+    padding: 0rem 2rem;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 1rem;
+  }
+}
+.product-card__hero {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product-card__title {
+  width: 18ch;
   font-family: VCR OSD Mono;
   color: white;
 }
@@ -872,7 +935,6 @@ footer {
   justify-content: center;
   gap: 14rem;
   margin: -3rem;
-  margin-bottom: -5rem;
 }
 .product-card__arrows figure {
   cursor: pointer;
