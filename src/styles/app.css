@@ -849,6 +849,10 @@ footer {
 
 .product-card__image {
   position: relative;
+  aspect-ratio: 400/533;
+}
+.product-card__image img {
+  object-fit: cover;
 }
 .product-card__image figure {
   position: absolute;
