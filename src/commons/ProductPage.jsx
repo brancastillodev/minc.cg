@@ -14,12 +14,13 @@ function ProductPage() {
   const [images, setImages] = useState(null);
   const [pos, setPos] = useState(0)
   const [waiting, setWaiting] = useState(true);
+  const [loaded, setLoaded] = useState(false)
 
   useEffect(() => {
     async function fetchProduct() {
       try {
         setWaiting(true);
-        
+
         if (product) {
 
           const imagesRes = await axios.get(`${API}/products/images/${id}`);
@@ -75,6 +76,8 @@ function ProductPage() {
               `}
               sizes="(max-width: 600px) 400px, 800px"
               alt={product.title}
+              onLoad={() => setLoaded(true)}
+              style={{ opacity: loaded ? 1 : 0 }}
             />
             
             {pos < images.length - 1 &&
