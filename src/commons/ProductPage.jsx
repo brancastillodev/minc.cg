@@ -8,7 +8,7 @@ import rightArrow from "../assets/programming/rightArrow.png";
 
 function ProductPage() {
   const API = import.meta.env.VITE_API_URL
-  const { id } = useParams();
+  const {id} = useParams();
   const location = useLocation();
   const [product, setProduct] = useState(location.state?.itemData || null);
   const [images, setImages] = useState(null);
@@ -22,11 +22,10 @@ function ProductPage() {
         setWaiting(true);
 
         if (product) {
-
           const imagesRes = await axios.get(`${API}/products/images/${id}`);
           setImages(imagesRes.data);
+
         } else {
-          
           const [productRes, imagesRes] = await Promise.all([
             axios.get(`${API}/products/${id}`),
             axios.get(`${API}/products/images/${id}`)
@@ -59,14 +58,14 @@ function ProductPage() {
               <img src={viewCart} alt=""></img>
             </figure>
           </div>
+          
           <figure className="product-card__image">
-           
             {pos > 0 &&
-              <figure onClick={() => { setPos(pos - 1) }} className="left-arrow">
+              <figure onClick={() => { setPos(pos - 1) }} className="left-arrow arrow-desktop">
                 <img src={leftArrow}></img>
               </figure>
             }
-            
+
             <img
               loading="lazy"
               src={images[pos].replace("/upload/", "/upload/f_auto,q_auto,w_400/")}
@@ -79,27 +78,31 @@ function ProductPage() {
               onLoad={() => setLoaded(true)}
               style={{ opacity: loaded ? 1 : 0 }}
             />
-            
+
             {pos < images.length - 1 &&
-              <figure onClick={() => { setPos(pos + 1) }} className="right-arrow">
+              <figure onClick={() => { setPos(pos + 1) }} className="right-arrow arrow-desktop">
                 <img src={rightArrow}></img>
               </figure>
             }
           </figure>
 
-
           <div className="product-card__bottom">
-            {product.size && <p className="product-card__price">{product.size}: </p>}
-            <p className="product-card__price">
-              £{Math.trunc(product.price)}
-            </p>
-          </div>
-          <div className="product-card__arrows">
+            <figure style={{ visibility: pos > 0 ? "visible" : "hidden" }} onClick={() => { setPos(pos - 1) }} className="arrow-mobile">
+              <img src={leftArrow}></img>
+            </figure>
+
+            <div className="product-card__bottom__price">
+              <p className="product-card__price">
+                {product.size && product.size}£{Math.trunc(product.price)}</p>
+              <figure className="add-to-cart-btn">
+                <img src={addToCart} alt={"add to cart button"}/>
+              </figure>
+            </div>
             
+            <figure style={{ visibility: pos < images.length - 1 ? "visible" : "hidden" }} onClick={() => { setPos(pos + 1) }} className="arrow-mobile">
+              <img src={rightArrow}></img>
+            </figure>
           </div>
-          <figure className="add-to-cart-btn">
-            <img src={addToCart} alt={"add to cart button"}></img>
-          </figure>
         </section>
       }
     </main>
