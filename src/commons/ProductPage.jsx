@@ -10,24 +10,28 @@ function ProductPage(){
   const { id } = useParams();
   const location = useLocation();
   const [product, setProduct] = useState(location.state?.itemData || null);
+  const [images, setImages] = useState(null);
+  const [pos, setPos] = useState(0)
   const [waiting, setWaiting] = useState(true);
   
   useEffect(() => {
     async function fetchProduct(){
-      if(!product){
+      // if(!product){
         try {
           const res = await axios.get(`https://minc-cg-back.onrender.com/products/${id}`); 
           setProduct(res.data);
-          setWaiting(false)
+          const res2 = await axios.get(`https://minc-cg-back.onrender.com/products/images/${id}`);
+          setImages(res2.data);
+          setWaiting(false);
         } catch (error) {
           console.error("Error fetching products:", error);
         }
-      }else{
-        setWaiting(false)
-      }
+      // }else{
+      //   setWaiting(false)
+      // }
     }
     fetchProduct()
-  }, []);
+  }, [id]);
 
 
   return(
@@ -42,9 +46,13 @@ function ProductPage(){
             <img src={viewCart} alt=""></img>
           </figure>
         </div>
+        
+        
         <figure className="product-card__image">
-          <img src={product.image}></img>
+          <img src={images[pos].url || product.image}></img>
         </figure>
+
+
         <div className="product-card__bottom">
         {product.size &&<p className="product-card__price">{product.size}: </p>}
         <p className="product-card__price">
@@ -52,12 +60,16 @@ function ProductPage(){
         </p>
         </div>
         <div className="product-card__arrows">
-          <figure className="left-arrow">
-            <img src={leftArrow}></img>
-          </figure>
-          <figure className="right-arrow">
-            <img src={rightArrow}></img>
-          </figure>
+          {pos > 0 &&
+            <figure onClick={()=>{setPos(pos-1)}} className="left-arrow">
+              <img src={leftArrow}></img>
+            </figure>
+          }
+          {pos < images.lengt &&
+            <figure onClick={()=>{setPos(pos+1)}} className="right-arrow">
+              <img src={rightArrow}></img>
+            </figure>
+          }
         </div>
         <figure className="add-to-cart-btn">
           <img src={addToCart} alt={"add to cart button"}></img>
