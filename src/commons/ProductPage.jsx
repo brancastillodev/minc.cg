@@ -55,7 +55,7 @@ function ProductPage() {
             }
             
             <img
-              // loading: 
+              loading="lazy"
               src={images[pos].replace("/upload/", "/upload/f_auto,q_auto,w_400/")}
               srcSet={`
                 ${images[pos].replace("/upload/", "/upload/f_auto,q_auto,w_400/")} 400w,
