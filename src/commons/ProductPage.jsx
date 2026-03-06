@@ -18,25 +18,32 @@ function ProductPage() {
   useEffect(() => {
     async function fetchProduct() {
       try {
-        setWaiting(true)
+        setWaiting(true);
+        
+        if (product) {
 
-        const [productRes, imagesRes] = await Promise.all([
-          axios.get(`${API}/products/${id}`),
-          axios.get(`${API}/products/images/${id}`)
-        ])
+          const imagesRes = await axios.get(`${API}/products/images/${id}`);
+          setImages(imagesRes.data);
+        } else {
+          
+          const [productRes, imagesRes] = await Promise.all([
+            axios.get(`${API}/products/${id}`),
+            axios.get(`${API}/products/images/${id}`)
+          ]);
 
-        setProduct(productRes.data)
-        setImages(imagesRes.data)
+          setProduct(productRes.data);
+          setImages(imagesRes.data);
+        }
 
       } catch (error) {
-        console.error("Error fetching products:", error)
+        console.error("Error fetching products:", error);
       } finally {
-        setWaiting(false)
+        setWaiting(false);
       }
     }
 
-    fetchProduct()
-  }, [id])
+    fetchProduct();
+  }, [id]);
 
 
   return (
