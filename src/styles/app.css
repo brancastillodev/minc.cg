@@ -919,7 +919,16 @@ footer {
     margin-right: 2rem;
   }
   .product-card__image {
-    width: 110%;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    width: 20rem;
+  }
+  .product-card__image figure {
+    position: relative;
+    width: 2.5em;
+    height: 4em;
+    cursor: pointer;
   }
   .product-card__bottom {
     display: flex;

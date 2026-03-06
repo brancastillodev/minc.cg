@@ -47,12 +47,24 @@ function ProductPage() {
             </figure>
           </div>
           <figure className="product-card__image">
-            <img src={images[pos]}></img>
+           
             {pos > 0 &&
               <figure onClick={() => { setPos(pos - 1) }} className="left-arrow">
                 <img src={leftArrow}></img>
               </figure>
             }
+            
+            <img
+              loading="lazy"
+              src={images[pos].replace("/upload/", "/upload/f_auto,q_auto,w_400/")}
+              srcSet={`
+                ${images[pos].replace("/upload/", "/upload/f_auto,q_auto,w_400/")} 400w,
+                ${images[pos].replace("/upload/", "/upload/f_auto,q_auto,w_800/")} 800w
+              `}
+              sizes="(max-width: 600px) 400px, 800px"
+              alt={product.title}
+            />
+            
             {pos < images.length - 1 &&
               <figure onClick={() => { setPos(pos + 1) }} className="right-arrow">
                 <img src={rightArrow}></img>
