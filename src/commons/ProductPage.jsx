@@ -7,6 +7,7 @@ import leftArrow from "../assets/programming/leftArrow.png";
 import rightArrow from "../assets/programming/rightArrow.png";
 
 function ProductPage() {
+  const API = import.meta.env.VITE_API_URL
   const { id } = useParams();
   const location = useLocation();
   const [product, setProduct] = useState(location.state?.itemData || null);
@@ -16,22 +17,26 @@ function ProductPage() {
 
   useEffect(() => {
     async function fetchProduct() {
-      // if(!product){
       try {
-        const res = await axios.get(`https://minc-cg-back.onrender.com/products/${id}`);
-        setProduct(res.data);
-        const res2 = await axios.get(`https://minc-cg-back.onrender.com/products/images/${id}`);
-        setImages(res2.data);
-        setWaiting(false);
+        setWaiting(true)
+
+        const [productRes, imagesRes] = await Promise.all([
+          axios.get(`${API}/products/${id}`),
+          axios.get(`${API}/products/images/${id}`)
+        ])
+
+        setProduct(productRes.data)
+        setImages(imagesRes.data)
+
       } catch (error) {
-        console.error("Error fetching products:", error);
+        console.error("Error fetching products:", error)
+      } finally {
+        setWaiting(false)
       }
-      // }else{
-      //   setWaiting(false)
-      // }
     }
+
     fetchProduct()
-  }, [id]);
+  }, [id])
 
 
   return (
