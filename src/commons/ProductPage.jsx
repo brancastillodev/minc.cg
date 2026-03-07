@@ -93,7 +93,7 @@ function ProductPage() {
 
             <div className="product-card__bottom__price">
               <p className="product-card__price">
-                {product.size && product.size}£{Math.trunc(product.price)}</p>
+                {product.size && `${product.size}: `}£{Math.trunc(product.price)}</p>
               <figure className="add-to-cart-btn">
                 <img src={addToCart} alt={"add to cart button"}/>
               </figure>
