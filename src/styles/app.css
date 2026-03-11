@@ -620,8 +620,12 @@ footer {
   display: flex;
   font-family: VCR OSD Mono;
   color: #FEF001;
-  width: 4.75rem;
+  width: 4.8rem;
   justify-content: space-between;
+}
+
+.item-price {
+  margin-right: 0.25rem;
 }
 
 .raffle-ticket {
