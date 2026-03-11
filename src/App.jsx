@@ -26,8 +26,10 @@ function App() {
   useEffect(()=>{
     if(location.pathname.startsWith("/market/")){
       setFooter(false)
+    }else{
+      setFooter(true)
     }
-  },[location])
+  },[location.pathname])
 
   return (
     <div className={isArticlePage ? "wraper article-wrap" :'wraper'}>
