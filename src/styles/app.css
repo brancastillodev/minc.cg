@@ -900,6 +900,9 @@ footer {
 }
 
 @media (min-width: 1000px) {
+  .simple-text.waiting-msg {
+    font-size: 1.3rem;
+  }
   .product-card {
     padding: 0rem 2rem;
     display: flex;
