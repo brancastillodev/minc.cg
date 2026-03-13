@@ -59,36 +59,35 @@ function ProductPage() {
             </figure>
           </div>
           
-          <figure className="product-card__image">
+          <div className="product-card__image">
             <figure 
             onClick={() => { setPos(pos - 1) }}
             style={pos > 0 ? { visibility: "visible" } : { visibility: "hidden" }}
-            className="left-arrow arrow-desktop">
+            className="arrow-desktop">
               <img src={leftArrow}></img>
             </figure>
-
-            <img
-              className="product-card__jpg"
-              loading="lazy"
-              src={images[pos].replace("/upload/", "/upload/f_auto,q_auto,w_400/")}
-              srcSet={`
-                ${images[pos].replace("/upload/", "/upload/f_auto,q_auto,w_400/")} 400w,
-                ${images[pos].replace("/upload/", "/upload/f_auto,q_auto,w_800/")} 800w
-              `}
-              sizes="(max-width: 600px) 400px, 800px"
-              alt={product.title}
-              onLoad={() => setLoaded(true)}
-              style={{ opacity: loaded ? 1 : 0 }}
-            />
-
+            <figure className="product-card__jpg">
+              <img
+                loading="lazy"
+                src={images[pos].replace("/upload/", "/upload/f_auto,q_auto,w_400/")}
+                srcSet={`
+                  ${images[pos].replace("/upload/", "/upload/f_auto,q_auto,w_400/")} 400w,
+                  ${images[pos].replace("/upload/", "/upload/f_auto,q_auto,w_800/")} 800w
+                `}
+                sizes="(max-width: 600px) 400px, 800px"
+                alt={product.title}
+                onLoad={() => setLoaded(true)}
+                style={{ opacity: loaded ? 1 : 0 }}
+              />
+            </figure>
             <figure 
             onClick={() => { setPos(pos + 1) }} 
-            className="right-arrow arrow-desktop"
+            className="arrow-desktop"
             style={pos < images.length - 1 ? { visibility: "visible" } : { visibility: "hidden" }}  
             >     
               <img src={rightArrow}></img>
             </figure>
-          </figure>
+          </div>
 
           <div className="product-card__grid">
             <div className="product-card__grid-1">

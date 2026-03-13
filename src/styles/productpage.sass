@@ -22,14 +22,12 @@
   width: 5rem
   margin-right: 2rem
 
-.product-card__image
+
+.product-card__jpg
   position: relative
   aspect-ratio: 400 / 533
   img
     object-fit: cover
-
-.arrow-desktop
-  display: none
 
 .product-card__bottom
   display: flex 
@@ -63,69 +61,69 @@
 
 .product-card__grid
   display: none
+
+.arrow-desktop
+  display: none
+
   
 @media (min-width: 1000px)
-  .simple-text.waiting-msg
-    font-size: 1.3rem
-  
   .content-page.product-page
-    border: 1px solid red
-    display: grid
-    align-content: center
-
-  .product-card
-    border: 1px solid green
-    width: auto
-    display: flex
-    flex-direction: row
-    margin: 0 auto
-    padding: 0
-    gap: 0
-
-  .product-card__image
-    border: 1px solid pink
+    // border: 1px solid red
     display: flex
     align-items: center
-    gap: 2rem
-    // width: auto
-    height: 30rem
-    .product-card__jpg
-      aspect-ratio: 450 / 533
-    .arrow-desktop
-      display: block
-      position: relative
-      width: 2em
-      cursor: pointer
+    justify-content: center
 
-  .product-card__grid
-    width: 60%
+  .simple-text.waiting-msg
+    font-size: 1.3rem
+    margin: 0 auto
+  
+  .product-card
+    // border: 1px solid red
     display: grid
-    grid-template-columns: repeat(2, 1fr)
-    div
-      border: 1px solid red
-      display: flex
-      justify-content: center
-      align-items: center
-    .product-card__title
-      width: 10rem
-      font-size: 1.8rem
-      text-align: center
+    grid-template-columns: 1fr 1fr
+    margin: 0 auto
+    padding: 0rem
+    gap: 0
+    width: auto
+    .product-card__image
       // border: 1px solid orange
-    .product-card__kart
-      width: 9rem
-      border: 1px solid green
-      cursor: pointer
-    .product-card__price
-      text-align: center
-      font-family: Questiora, VCR OSD Mono
-      color: #FEF001
-      text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.8)
-      font-size: 2rem  
-    .add-to-cart-btn
-      // border: 1px solid gray
-      position: relative
-      width: 12rem!important
-      cursor: pointer
+      display: flex
+      align-items: center
+      gap: 2rem
+      width: auto
+      padding: 0rem
+      .arrow-desktop
+        display: block
+        width: 2.5rem
+        cursor: pointer
+      .product-card__jpg
+        width: 20rem
+    .product-card__grid
+      // border: 1px solid green
+      width: 30rem
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      div
+        display: flex
+        justify-content: center
+        align-items: center
+      .product-card__title
+        font-size: 1.5rem
+        text-align: center
+      .product-card__kart
+        width: 7rem
+        margin-right: 0
+        cursor: pointer
+      .product-card__price
+        text-align: center
+        font-family: Questiora, VCR OSD Mono
+        color: #FEF001
+        text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.8)
+        font-size: 2rem  
+      .add-to-cart-btn
+        position: relative
+        width: 10rem
+        cursor: pointer
 
   .product-card__hero
     display: none

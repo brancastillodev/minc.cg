@@ -854,16 +854,12 @@ footer {
   margin-right: 2rem;
 }
 
-.product-card__image {
+.product-card__jpg {
   position: relative;
   aspect-ratio: 400/533;
 }
-.product-card__image img {
+.product-card__jpg img {
   object-fit: cover;
-}
-
-.arrow-desktop {
-  display: none;
 }
 
 .product-card__bottom {
@@ -905,71 +901,72 @@ footer {
   display: none;
 }
 
+.arrow-desktop {
+  display: none;
+}
+
 @media (min-width: 1000px) {
+  .content-page.product-page {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
   .simple-text.waiting-msg {
     font-size: 1.3rem;
-  }
-  .content-page.product-page {
-    border: 1px solid red;
-    display: grid;
-    align-content: center;
+    margin: 0 auto;
   }
   .product-card {
-    border: 1px solid green;
-    width: auto;
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
     margin: 0 auto;
-    padding: 0;
+    padding: 0rem;
     gap: 0;
+    width: auto;
   }
-  .product-card__image {
-    border: 1px solid pink;
+  .product-card .product-card__image {
     display: flex;
     align-items: center;
     gap: 2rem;
-    height: 30rem;
+    width: auto;
+    padding: 0rem;
   }
-  .product-card__image .product-card__jpg {
-    aspect-ratio: 450/533;
-  }
-  .product-card__image .arrow-desktop {
+  .product-card .product-card__image .arrow-desktop {
     display: block;
-    position: relative;
-    width: 2em;
+    width: 2.5rem;
     cursor: pointer;
   }
-  .product-card__grid {
-    width: 60%;
+  .product-card .product-card__image .product-card__jpg {
+    width: 20rem;
+  }
+  .product-card .product-card__grid {
+    width: 30rem;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
   }
-  .product-card__grid div {
-    border: 1px solid red;
+  .product-card .product-card__grid div {
     display: flex;
     justify-content: center;
     align-items: center;
   }
-  .product-card__grid .product-card__title {
-    width: 10rem;
-    font-size: 1.8rem;
+  .product-card .product-card__grid .product-card__title {
+    font-size: 1.5rem;
     text-align: center;
   }
-  .product-card__grid .product-card__kart {
-    width: 9rem;
-    border: 1px solid green;
+  .product-card .product-card__grid .product-card__kart {
+    width: 7rem;
+    margin-right: 0;
     cursor: pointer;
   }
-  .product-card__grid .product-card__price {
+  .product-card .product-card__grid .product-card__price {
     text-align: center;
     font-family: Questiora, VCR OSD Mono;
     color: #FEF001;
     text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.8);
     font-size: 2rem;
   }
-  .product-card__grid .add-to-cart-btn {
+  .product-card .product-card__grid .add-to-cart-btn {
     position: relative;
-    width: 12rem !important;
+    width: 10rem;
     cursor: pointer;
   }
   .product-card__hero {
