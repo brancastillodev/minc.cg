@@ -47,7 +47,7 @@ function ProductPage() {
 
 
   return (
-    <main className="content-page">
+    <main className="content-page product-page">
       {waiting ?
         <p className='simple-text waiting-msg'>Loading, please wait...</p>
         :
@@ -89,6 +89,30 @@ function ProductPage() {
               <img src={rightArrow}></img>
             </figure>
           </figure>
+
+          <div className="product-card__grid">
+            <div className="product-card__grid-1">
+              <p className="product-card__title">{product.title}</p>
+            </div>
+
+            <div className="product-card__grid-2">
+              <figure className="product-card__kart">
+                <img src={viewCart} alt=""></img>
+              </figure>
+            </div>
+
+            <div className="product-card__grid-3">
+              <p className="product-card__price">
+                {product.size && `${product.size}: `}£{Math.trunc(product.price)}
+              </p>
+            </div>
+            
+            <div className="product-card__grid-4">
+              <figure className="add-to-cart-btn">
+                <img src={addToCart} alt={"add to cart button"}/>
+              </figure>
+            </div>
+          </div>
 
           <div className="product-card__bottom">
             <figure 
