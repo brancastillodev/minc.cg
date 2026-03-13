@@ -66,19 +66,16 @@
   .simple-text.waiting-msg
     font-size: 1.3rem
   
-  
   .product-card
-    padding: 0rem 2rem
-    display: flex
-    flex-direction: column
-    width: 100%
-    gap: 1rem
-
-  .product-card__hero
-    width: 100%
     display: flex
     align-items: center
-    justify-content: space-between
+    justify-items: center
+    flex-direction: row
+    padding: 0
+    gap: 0
+
+  .product-card__hero
+    display: none
 
   .product-card__title
     width: 18ch
@@ -93,26 +90,16 @@
     display: flex
     align-items: center
     gap: 1rem
-    width: 20rem
-    figure
-      position: absolute
+    width: 30rem
+    aspect-ratio: 450 / 533
+    .arrow-desktop
+      display: block
+      position: relative
       width: 2.5em
       cursor: pointer
-    .left-arrow
-      top: 40%
-      left: 0
-    .right-arrow
-      top: 40%
-      right: 0%
-
-  .arrow-desktop
-    display: block
-
-  .arrow-mobile
-    display: none 
 
   .product-card__bottom
-    display: flex 
+    display: none 
     gap: 2rem
     align-items: center
     justify-content: center

@@ -60,13 +60,15 @@ function ProductPage() {
           </div>
           
           <figure className="product-card__image">
-            {pos > 0 &&
-              <figure onClick={() => { setPos(pos - 1) }} className="left-arrow arrow-desktop">
-                <img src={leftArrow}></img>
-              </figure>
-            }
+            <figure 
+            onClick={() => { setPos(pos - 1) }}
+            style={pos > 0 ? { visibility: "visible" } : { visibility: "hidden" }}
+            className="left-arrow arrow-desktop">
+              <img src={leftArrow}></img>
+            </figure>
 
             <img
+              className="product-card__jpg"
               loading="lazy"
               src={images[pos].replace("/upload/", "/upload/f_auto,q_auto,w_400/")}
               srcSet={`
@@ -79,15 +81,20 @@ function ProductPage() {
               style={{ opacity: loaded ? 1 : 0 }}
             />
 
-            {pos < images.length - 1 &&
-              <figure onClick={() => { setPos(pos + 1) }} className="right-arrow arrow-desktop">
-                <img src={rightArrow}></img>
-              </figure>
-            }
+            <figure 
+            onClick={() => { setPos(pos + 1) }} 
+            className="right-arrow arrow-desktop"
+            style={pos < images.length - 1 ? { visibility: "visible" } : { visibility: "hidden" }}  
+            >     
+              <img src={rightArrow}></img>
+            </figure>
           </figure>
 
           <div className="product-card__bottom">
-            <figure style={{ visibility: pos > 0 ? "visible" : "hidden" }} onClick={() => { setPos(pos - 1) }} className="arrow-mobile">
+            <figure 
+            style={{ visibility: pos > 0 ? "visible" : "hidden" }} 
+            onClick={() => { setPos(pos - 1) }} 
+            className="arrow-mobile">
               <img src={leftArrow}></img>
             </figure>
 
@@ -99,7 +106,10 @@ function ProductPage() {
               </figure>
             </div>
             
-            <figure style={{ visibility: pos < images.length - 1 ? "visible" : "hidden" }} onClick={() => { setPos(pos + 1) }} className="arrow-mobile">
+            <figure 
+            style={{ visibility: pos < images.length - 1 ? "visible" : "hidden" }} 
+            onClick={() => { setPos(pos + 1) }} 
+            className="arrow-mobile">
               <img src={rightArrow}></img>
             </figure>
           </div>
