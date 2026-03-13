@@ -11,8 +11,11 @@
   justify-content: space-between
 
 .product-card__title
-  width: 20ch
-  font-family: Arial !important
+  width: 10ch
+  font-family: Arial
+  text-shadow: 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.9)
+  font-size: 1.1rem
+  font-weight: 500
   color: white
 
 .product-card__kart
@@ -80,18 +83,18 @@
     gap: 0
 
   .product-card__image
-    // border: 1px solid pink
+    border: 1px solid pink
     display: flex
     align-items: center
     gap: 2rem
-    width: 40%
-    aspect-ratio: 450 / 533
+    // width: auto
+    height: 30rem
     .product-card__jpg
-      height: 30rem
+      aspect-ratio: 450 / 533
     .arrow-desktop
       display: block
       position: relative
-      width: 2.5em
+      width: 2em
       cursor: pointer
 
   .product-card__grid
@@ -104,7 +107,7 @@
       justify-content: center
       align-items: center
     .product-card__title
-      width: 20rem
+      width: 10rem
       font-size: 1.8rem
       text-align: center
       // border: 1px solid orange
