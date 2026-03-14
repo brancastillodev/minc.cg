@@ -683,7 +683,7 @@ footer {
     grid-template-columns: repeat(3, 200px);
     margin-left: 4rem;
     row-gap: 7rem;
-    column-gap: 8rem;
+    column-gap: 7rem;
   }
   .item-card {
     align-items: flex-start;
@@ -698,11 +698,11 @@ footer {
     aspect-ratio: 513/665;
   }
   .item-title {
-    width: 10.8rem;
-    font-size: 0.8rem;
+    width: 7rem;
+    font-size: 0.9rem;
   }
   .item-size-price {
-    font-size: 0.8rem;
+    font-size: 0.95rem;
     margin-top: 0.8rem;
     display: flex;
     justify-content: space-between;
@@ -944,7 +944,7 @@ footer {
     grid-template-columns: repeat(2, 1fr);
   }
   .product-card .product-card__grid div {
-    width: 19rem;
+    width: 23rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -954,7 +954,7 @@ footer {
     text-align: center;
   }
   .product-card .product-card__grid .product-card__kart {
-    width: 6rem;
+    width: 7rem;
     margin-right: 0;
     cursor: pointer;
   }
