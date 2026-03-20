@@ -2,16 +2,35 @@ import addToCard from "../assets/market/addToCartAlone.png"
 import menuBox from "../assets/buttons/oneBoxShadow.png"
 import menuBoxSel from "../assets/buttons/menuBoxesShadowSel.png"
 import { Link } from "react-router-dom"
+import { useState } from "react";
 
 
 function ItemCard({itemData}){
+//   const [cart, setCart] = useState([]);
+  
+//   const addToCart = (product) => {
+//   setCart((prev) => {
+//       const existing = prev.find(p => p.id === product.id);
+
+//       if (existing) {
+//         return prev.map(p =>
+//           p.id === product.id
+//             ? { ...p, quantity: p.quantity + 1 }
+//             : p
+//         );
+//       }
+
+//       return [...prev, { ...product, quantity: 1 }];
+//     });
+//   };
+  
   return(
     <div className="item-card">
-      <figure className="item-image"><img src={itemData.image}/></figure>
-      
       <Link state={{ itemData }}  className="item-card__link" to={`/market/${itemData.id}`}>
+        <figure className="item-image"><img src={itemData.image}/></figure>
         <p className="item-title">{itemData.title}</p>
       </Link>
+      
 
       <div className="item-size-price">
         {itemData.size == "Raffle Tickets" ? <div className="raffle-ticket">Raffle Tickets</div>

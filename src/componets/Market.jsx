@@ -9,7 +9,7 @@ import axios from 'axios'
 function Market(){
   const [allProducts, setAllProducts] = useState([]);
   const [waiting, setWaiting] = useState(true);
-  
+
   useEffect(() => {
     const fetchProducts = async () => {
       try {
