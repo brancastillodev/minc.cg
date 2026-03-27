@@ -5,6 +5,7 @@ import viewCart from "../assets/market/viewCart.png"
 import addToCart from "../assets/market/addToCart2.png"
 import leftArrow from "../assets/programming/leftArrow.png";
 import rightArrow from "../assets/programming/rightArrow.png";
+import AddCartButton from "./AddCartButton";
 
 function ProductPage() {
   const API = import.meta.env.VITE_API_URL
@@ -107,9 +108,7 @@ function ProductPage() {
             </div>
             
             <div className="product-card__grid-4">
-              <figure className="add-to-cart-btn">
-                <img src={addToCart} alt={"add to cart button"}/>
-              </figure>
+              <AddCartButton product={product}/>
             </div>
           </div>
 

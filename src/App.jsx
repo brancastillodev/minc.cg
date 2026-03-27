@@ -11,6 +11,7 @@ import ArticleCard from './commons/ArticleCard';
 import ProductPage from './commons/ProductPage';
 import { useLocation } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import CartPage from './componets/CartPage';
 
 function App() {
   const location = useLocation();
@@ -42,6 +43,7 @@ function App() {
         <Route path="/market" element={<Market/>}/>
         <Route path="/market/:id" element={<ProductPage />} />
         <Route path="/about-us" element={<AboutUs/>}/>
+        <Route path="/cart" element={<CartPage/>}/>
       </Routes>
       {footer && <Footer/>}
     </div>
