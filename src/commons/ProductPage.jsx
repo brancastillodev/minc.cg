@@ -55,7 +55,7 @@ function ProductPage() {
         <section className="product-card">
           <div className="product-card__hero">
             <p className="product-card__title">{product.title}</p>
-            <figure className="product-card__kart">
+            <figure className="product-card__kart snipcart-checkout">
               <img src={viewCart} alt=""></img>
             </figure>
           </div>
@@ -96,7 +96,7 @@ function ProductPage() {
             </div>
 
             <div className="product-card__grid-2">
-              <figure className="product-card__kart">
+              <figure className="product-card__kart snipcart-checkout">
                 <img src={viewCart} alt=""></img>
               </figure>
             </div>
@@ -124,7 +124,7 @@ function ProductPage() {
               <p className="product-card__price">
                 {product.size && `${product.size}: `}£{Math.trunc(product.price)}</p>
               <figure className="add-to-cart-btn">
-                <img src={addToCart} alt={"add to cart button"}/>
+                <AddCartButton product={product}/>
               </figure>
             </div>
             

@@ -36,8 +36,8 @@ function Market(){
         <figure className="description-box">
           <img src={descriptionBox} alt="market-title" />
         </figure>
-        <Link to={"/"}>
-          <figure className="view-cart">
+        <Link>
+          <figure className="view-cart snipcart-checkout">
             <img src={viewCart} alt="market-title" />
           </figure>
         </Link>
