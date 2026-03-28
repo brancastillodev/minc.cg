@@ -12,13 +12,6 @@
   font-style: normal;
   font-display: swap;
 }
-@font-face {
-  font-family: "Arial";
-  src: url("../assets/fonts/ARIAL.TTF") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
 .navbar {
   display: flex;
   padding: 1.5rem 0.9rem 0.5rem 1.5rem;
@@ -616,6 +609,7 @@ footer {
 }
 
 .item-size-price {
+  border: 1px solid red;
   margin-top: 0.3rem;
   display: flex;
   font-family: VCR OSD Mono;
@@ -754,10 +748,6 @@ footer {
 .about-us-page__video video {
   aspect-ratio: 1/1;
   width: 4rem;
-}
-
-.minc-title {
-  font-family: VCR OSD Mono;
 }
 
 .yellow {
