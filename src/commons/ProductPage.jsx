@@ -8,6 +8,7 @@ import AddCartButton from "./AddCartButton";
 import itemsTitle from "../assets/market/itemsTitle.png"
 import raffleTitle from "../assets/market/rulesTitle.png"
 import text from "../assets/market/rulesText.png"
+import textDesktop from "../assets/market/rulesTextDesktop.png"
 import itemList from "../assets/market/itemsText.png"
 
 function ProductPage() {
@@ -98,24 +99,20 @@ function ProductPage() {
             <div className="product-card__grid-1">
               <p className="product-card__title">{product.title}</p>
             </div>
-
             <div className="product-card__grid-2">
               <figure className="product-card__kart snipcart-checkout">
                 <img src={viewCart} alt=""></img>
               </figure>
             </div>
-
             <div className="product-card__grid-3">
               <p className="product-card__price">
                 {product.size && `${product.size}: `}£{Math.trunc(product.price)}
               </p>
             </div>
-            
             <div className="product-card__grid-4">
               <AddCartButton product={product}/>
             </div>
           </div>
-
 
           <div className="product-card__bottom">
             <figure 
@@ -124,19 +121,14 @@ function ProductPage() {
               className="arrow-mobile">
                 <img src={leftArrow}></img>
             </figure>
-
             <div className="product-card__bottom__price">
               <p className={product.size ? 'product-card__price': "product-card__price no-size" }>
-
-
-                <span>{product.size && product.size =="Raffle Tickets" ? "Tickets: " :`${product.size}:`}</span>
-                
+                <span>{product.size && (product.size =="Raffle Tickets" ? "Tickets: " : `${product.size}:`)}</span>
                 <span>£{Math.trunc(product.price)}</span></p>
               <figure className="add-to-cart-btn">
                 <AddCartButton product={product}/>
               </figure>
             </div>
-            
             <figure 
               style={{ visibility: pos < images.length - 1 ? "visible" : "hidden" }} 
               onClick={() => { setPos(pos + 1) }} 
@@ -153,14 +145,16 @@ function ProductPage() {
             <figure className="ticket-section__text">
               <img src={text} alt="" />
             </figure>
+            <figure className="ticket-section__text_desktop">
+              <img src={textDesktop} alt="" />
+            </figure>
             <figure className="ticket-section__img_items">
               <img src={itemsTitle} alt=""></img>
             </figure> 
             <figure className="ticket-section__list">
               <img src={itemList} alt="" />
             </figure>
-           </div>
-          }
+           </div>}
         </section>
       }
     </main>

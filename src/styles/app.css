@@ -913,6 +913,10 @@ footer {
   margin: 1rem auto 7rem 0;
 }
 
+.ticket-section__text_desktop {
+  display: none;
+}
+
 .product-card__grid {
   display: none;
 }
@@ -985,6 +989,26 @@ footer {
     position: relative;
     width: 11rem;
     cursor: pointer;
+  }
+  .ticket-section {
+    display: none;
+    border: 1px solid white;
+    margin: 0 auto;
+    margin-top: 3rem;
+    gap: 2rem;
+  }
+  .ticket-section .ticket-section__img {
+    width: 150px;
+  }
+  .ticket-section .ticket-section__img_items {
+    width: 250px;
+  }
+  .ticket-section .ticket-section__text {
+    width: 400px;
+  }
+  .ticket-section__text_desktop {
+    display: block;
+    width: 400px;
   }
   .product-card__hero {
     display: none;
