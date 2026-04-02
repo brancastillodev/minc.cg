@@ -112,27 +112,28 @@ function ProductPage() {
             </div>
           </div>
 
+
           <div className="product-card__bottom">
             <figure 
-            style={{ visibility: pos > 0 ? "visible" : "hidden" }} 
-            onClick={() => { setPos(pos - 1) }} 
-            className="arrow-mobile">
-              <img src={leftArrow}></img>
+              style={{ visibility: pos > 0 ? "visible" : "hidden" }} 
+              onClick={() => { setPos(pos - 1) }} 
+              className="arrow-mobile">
+                <img src={leftArrow}></img>
             </figure>
 
             <div className="product-card__bottom__price">
               <p className="product-card__price">
-                {product.size && `${product.size}: `}£{Math.trunc(product.price)}</p>
+                <span>{product.size && `${product.size}: `}</span><span>£{Math.trunc(product.price)}</span></p>
               <figure className="add-to-cart-btn">
                 <AddCartButton product={product}/>
               </figure>
             </div>
             
             <figure 
-            style={{ visibility: pos < images.length - 1 ? "visible" : "hidden" }} 
-            onClick={() => { setPos(pos + 1) }} 
-            className="arrow-mobile">
-              <img src={rightArrow}></img>
+              style={{ visibility: pos < images.length - 1 ? "visible" : "hidden" }} 
+              onClick={() => { setPos(pos + 1) }} 
+              className="arrow-mobile">
+                <img src={rightArrow}></img>
             </figure>
           </div>
         </section>
