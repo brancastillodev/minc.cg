@@ -5,6 +5,10 @@ import viewCart from "../assets/market/viewCart.png"
 import leftArrow from "../assets/programming/leftArrow.png";
 import rightArrow from "../assets/programming/rightArrow.png";
 import AddCartButton from "./AddCartButton";
+import itemsTitle from "../assets/market/itemsTitle.png"
+import raffleTitle from "../assets/market/rulesTitle.png"
+import text from "../assets/market/rulesText.png"
+import itemList from "../assets/market/itemsText.png"
 
 function ProductPage() {
   const API = import.meta.env.VITE_API_URL
@@ -123,7 +127,11 @@ function ProductPage() {
 
             <div className="product-card__bottom__price">
               <p className={product.size ? 'product-card__price': "product-card__price no-size" }>
-                <span>{product.size && `${product.size}: `}</span><span>£{Math.trunc(product.price)}</span></p>
+
+
+                <span>{product.size && product.size =="Raffle Tickets" ? "Tickets: " :`${product.size}:`}</span>
+                
+                <span>£{Math.trunc(product.price)}</span></p>
               <figure className="add-to-cart-btn">
                 <AddCartButton product={product}/>
               </figure>
@@ -136,6 +144,23 @@ function ProductPage() {
                 <img src={rightArrow}></img>
             </figure>
           </div>
+
+          {product.size=="Raffle Tickets" && 
+           <div className="ticket-section">
+            <figure className="ticket-section__img">
+              <img src={raffleTitle} alt=""></img>
+            </figure>
+            <figure className="ticket-section__text">
+              <img src={text} alt="" />
+            </figure>
+            <figure className="ticket-section__img_items">
+              <img src={itemsTitle} alt=""></img>
+            </figure> 
+            <figure className="ticket-section__list">
+              <img src={itemList} alt="" />
+            </figure>
+           </div>
+          }
         </section>
       }
     </main>

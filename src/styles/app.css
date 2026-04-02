@@ -879,7 +879,7 @@ footer {
 }
 .product-card__bottom .product-card__bottom__price .product-card__price {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   text-align: center;
   width: 9rem;
   top: 10%;
@@ -894,6 +894,23 @@ footer {
 .product-card__bottom .product-card__bottom__price .add-to-cart-btn {
   width: 8rem;
   cursor: pointer;
+}
+
+.ticket-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.ticket-section .ticket-section__img {
+  width: 100px;
+}
+.ticket-section .ticket-section__img_items {
+  width: 170px;
+}
+.ticket-section .ticket-section__list {
+  width: 150px;
+  margin: 1rem auto 7rem 0;
 }
 
 .product-card__grid {
