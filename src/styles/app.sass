@@ -36,14 +36,21 @@ video
   display: block
     
 .wraper
+  min-height: 100dvh
   display: flex
   flex-direction: column
-  min-height: 100dvh
   overflow: hidden
-  background-image: url("../assets/bg/webBackgroundRework.webp")
+  position: relative
+
+.wraper::before
+  content: ""
+  position: fixed
+  inset: 0
+  background-image: url("../assets/bg/mobile-websiteBackgroundResize.webp")
   background-size: cover
   background-position: center
-
+  background-repeat: no-repeat
+  z-index: -1
 main
   display: flex
   flex: 1
@@ -58,7 +65,7 @@ main
   width: 4.5rem
 
 div .article-wrap
-  background-size: contain
+  // background-size: contain
 
 .simple-text
   font-size: 0.5rem
@@ -69,7 +76,7 @@ div .article-wrap
 
 @media (min-width: 1000px)
   div .wraper
-    background-image: url("../assets/bg/websiteBackgroundResize.jpg")
+    background-image: url("../assets/bg/websiteBackgroundResize.webp")
     background-size: cover
     background-attachment: fixed
   .content-title-text
