@@ -842,7 +842,7 @@ footer {
 
 .product-card__kart {
   width: 5rem;
-  margin-right: 2rem;
+  margin-right: 1rem;
   cursor: pointer;
 }
 
@@ -887,6 +887,9 @@ footer {
   color: #FEF001;
   font-family: Questiora, VCR OSD Mono;
   text-shadow: 0.2em 0.2em 0.1em rgba(0, 0, 0, 0.8);
+}
+.product-card__bottom .product-card__bottom__price .no-size {
+  justify-content: center;
 }
 .product-card__bottom .product-card__bottom__price .add-to-cart-btn {
   width: 8rem;

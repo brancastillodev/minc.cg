@@ -16,6 +16,7 @@ function App() {
   const location = useLocation();
   const [footer, setFooter] = useState(true)
 
+  // article and market page checker
   const isArticlePage = (
       location.pathname.startsWith('/programming/') && 
       location.pathname !== '/programming'
@@ -23,6 +24,7 @@ function App() {
       location.pathname == '/market'
   )
 
+  // footer checker
   useEffect(()=>{
     if(location.pathname.startsWith("/market/")){
       setFooter(false)
