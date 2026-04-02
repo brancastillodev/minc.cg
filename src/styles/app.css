@@ -832,7 +832,7 @@ footer {
 }
 
 .product-card__title {
-  width: 20ch;
+  width: 25ch;
   font-family: Arial;
   text-shadow: 0.2rem 0.2rem 0 rgba(0, 0, 0, 0.9);
   font-size: 1rem;

@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import { useLocation, useParams } from "react-router-dom";
 import viewCart from "../assets/market/viewCart.png"
-import addToCart from "../assets/market/addToCart2.png"
 import leftArrow from "../assets/programming/leftArrow.png";
 import rightArrow from "../assets/programming/rightArrow.png";
 import AddCartButton from "./AddCartButton";
@@ -16,6 +15,7 @@ function ProductPage() {
   const [pos, setPos] = useState(0)
   const [waiting, setWaiting] = useState(true);
   const [loaded, setLoaded] = useState(false)
+  const [raffle, setRaffle] = useState(false)
 
   useEffect(() => {
     async function fetchProduct() {
