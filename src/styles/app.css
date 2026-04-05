@@ -1078,7 +1078,7 @@ main {
 
 @media (min-width: 1000px) {
   div .wraper {
-    background-image: url("../assets/bg/websiteBackgroundResize.webp");
+    background-image: url("../assets/bg/mobile-websiteBackgroundResize.webp");
     background-size: cover;
     background-attachment: fixed;
   }
