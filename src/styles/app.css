@@ -238,6 +238,7 @@ footer {
   cursor: pointer;
   position: relative;
   z-index: 1;
+  margin-left: 0.1rem;
 }
 
 .about-us-link {
@@ -438,7 +439,7 @@ footer {
 
 .article-epigrafe {
   text-align: justify;
-  width: 14rem;
+  width: 80%;
 }
 .article-epigrafe span {
   font-size: 0.55rem;
