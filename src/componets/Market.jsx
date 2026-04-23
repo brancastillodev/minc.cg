@@ -42,6 +42,7 @@ function Market(){
           </figure>
         </Link>
       </section>
+      
       {waiting ? 
         <p className='simple-text waiting-msg'>Loading, please wait...</p>  :
       <div className='market-div'>
