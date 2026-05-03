@@ -44,7 +44,7 @@ function Market(){
       </section>
       
       {waiting ? 
-        <p className='simple-text waiting-msg'>Loading, please wait...</p>  :
+        <p  style={{marginTop: "1.5rem"}} className='simple-text waiting-msg'>Loading, please wait...</p>  :
       <div className='market-div'>
         <section className="market">
           {allProducts.length > 0 && allProducts.map((e, i)=>(
