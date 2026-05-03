@@ -10,6 +10,7 @@ function AddCartButton({product}){
       data-item-name={product.title}
       data-item-image={product.image}
       data-item-description={product.size}
+      data-item-quantity="1"
     >             
       <img src={addToCart} alt={"add to cart button"}/>
     </figure>

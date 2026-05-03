@@ -11,8 +11,7 @@ function ItemCard({itemData}){
       </Link>
 
       <div className="item-size-price">
-        {itemData.size == "Raffle Tickets" ? <div className="raffle-ticket">Raffle Tickets</div>
-        : <p className="item-size-">{itemData.size}</p>}
+        <p className="item-size-">{itemData.size}</p>
         <p className="item-price">£{Math.trunc(itemData.price)}</p>
       </div>
       

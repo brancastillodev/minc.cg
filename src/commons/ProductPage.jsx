@@ -6,10 +6,6 @@ import leftArrow from "../assets/programming/leftArrow.png";
 import rightArrow from "../assets/programming/rightArrow.png";
 import AddCartButton from "./AddCartButton";
 import itemsTitle from "../assets/market/itemsTitle.png"
-import raffleTitle from "../assets/market/rulesTitle.png"
-import text from "../assets/market/rulesText.png"
-import textDesktop from "../assets/market/rulesTextDesktop.png"
-import itemList from "../assets/market/itemsText.png"
 
 function ProductPage() {
   const API = import.meta.env.VITE_API_URL
@@ -20,7 +16,6 @@ function ProductPage() {
   const [pos, setPos] = useState(0)
   const [waiting, setWaiting] = useState(true);
   const [loaded, setLoaded] = useState(false)
-  const [raffle, setRaffle] = useState(false)
 
   useEffect(() => {
     async function fetchProduct() {
@@ -137,24 +132,6 @@ function ProductPage() {
             </figure>
           </div>
 
-          {product.size=="Raffle Tickets" && 
-           <div className="ticket-section">
-            <figure className="ticket-section__img">
-              <img src={raffleTitle} alt=""></img>
-            </figure>
-            <figure className="ticket-section__text">
-              <img src={text} alt="" />
-            </figure>
-            <figure className="ticket-section__text_desktop">
-              <img src={textDesktop} alt="" />
-            </figure>
-            <figure className="ticket-section__img_items">
-              <img src={itemsTitle} alt=""></img>
-            </figure> 
-            <figure className="ticket-section__list">
-              <img src={itemList} alt="" />
-            </figure>
-           </div>}
         </section>
       }
     </main>

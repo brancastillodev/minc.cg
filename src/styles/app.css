@@ -87,7 +87,7 @@
   display: none;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   .navbar {
     display: flex;
     padding: 2.4rem 3rem 0.5rem 3.8rem;
@@ -212,7 +212,7 @@
     right: 25px;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 800px) {
   .greetings-message {
     width: 23.8rem;
   }
@@ -1081,9 +1081,9 @@ div .article-wrap {
   text-shadow: 0.13rem 0.14rem 0 rgba(0, 0, 0, 0.9);
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 800px) {
   div .wraper {
-    background-image: url("../assets/bg/websiteBackgroundResize.webp");
+    background-image: url("../assets/bg/websiteBackground.webp");
     background-size: cover;
     background-attachment: fixed;
   }
