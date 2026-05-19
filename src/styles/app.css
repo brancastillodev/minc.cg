@@ -405,7 +405,6 @@ footer {
 .article-description-select {
   margin-top: 0.5rem;
   text-align: justify;
-  transform: scaleX(1.15);
 }
 .article-description-select p {
   font-size: 0.6rem;
