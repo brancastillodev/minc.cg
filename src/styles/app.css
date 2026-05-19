@@ -160,7 +160,7 @@
   display: none;
 }
 
-@media (min-width: 700px) {
+@media (min-width: 900px) {
   .welcome-page {
     align-items: flex-start;
   }
@@ -278,7 +278,7 @@ footer {
   opacity: 0;
 }
 
-@media (min-width: 1000px) {
+@media (min-width: 900px) {
   footer {
     padding: 4rem;
   }
