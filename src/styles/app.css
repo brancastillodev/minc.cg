@@ -685,6 +685,9 @@ footer {
     row-gap: 7rem;
     column-gap: 7rem;
   }
+  .waiting-msg {
+    margin-top: 1rem !important;
+  }
   .item-card {
     align-items: flex-start;
     color: white;
@@ -938,6 +941,7 @@ footer {
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: -6rem;
   }
   .simple-text.waiting-msg {
     font-size: 1.3rem;
