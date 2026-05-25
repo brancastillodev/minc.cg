@@ -1,4 +1,4 @@
-import { useState} from "react";
+import { useState,useRef,useEffect} from "react";
 import { Link } from "react-router-dom";
 import logo from "../assets/logo/CGCmincLogo.webp"
 import menuButton from "../assets/buttons/menuBttn@300x.png"
@@ -14,6 +14,31 @@ import menuBoxSel from "../assets/buttons/menuBoxesShadowSel.png"
 
 function Navbar() {
     const [extraMenu, setExtraMenu] = useState(false);
+    const menuBoxRef = useRef(null);
+    const buttonRef = useRef(null);
+
+    useEffect(() => {
+    const handleClickOutside = (event) => {
+      // Si el click NO es en el menú Y NO es en el botón → cerrar
+      if (
+        menuBoxRef.current && 
+        !menuBoxRef.current.contains(event.target) &&
+        buttonRef.current &&
+        !buttonRef.current.contains(event.target)
+      ) {
+        setExtraMenu(false);
+      }
+    };
+
+    // Solo agregar el listener si el menú está abierto (optimización)
+    if (extraMenu) {
+      document.addEventListener('mousedown', handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, [extraMenu]); 
 
     return(
       <>
@@ -43,7 +68,7 @@ function Navbar() {
           </div>
          
          {/* MENU MOBILE */}
-          <figure className="menu-mobile-button">
+          <figure ref={buttonRef} className="menu-mobile-button">
             <img onClick={()=>setExtraMenu(!extraMenu)} src={menuButton}></img>
             <figure  className={extraMenu ? "navbar-menu-line" : "menu-closed"}>
               <img src={menuLine}></img>
@@ -52,7 +77,7 @@ function Navbar() {
         </nav>
 
         {/* EXTRA MENU MOBILE */}
-        <div className={extraMenu ? "extra-menu" : "menu-closed"}>
+        <div ref={menuBoxRef}  className={extraMenu ? "extra-menu" : "menu-closed"}>
           <div className="extra-menu-buttons-div">
             <Link to={"/programming"} onClick={()=>setExtraMenu(!extraMenu)}>
               <figure className="navbar-extra-button">
