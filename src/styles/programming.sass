@@ -17,9 +17,15 @@
   grid-template-columns: repeat(2, 1fr)
   gap: 1.2rem
   width: 100%
-  height: 10rem
-  padding: 0 1rem
+  // height: auto
+  // padding: 0 1rem
+
   margin-bottom: 2rem
+  border: 1px solid red
+    
+.articles-menu-one-option
+  border: 1px solid green
+  margin: 0 auto
 
 .article-image-select
   width: 5.5rem
@@ -98,14 +104,24 @@
   visibility: hidden
   pointer-events: none
 
+@media (min-width: 700px)
+  .programming-description
+    margin-top: 0.7rem
+    width: 20rem
 
+  .articles-menu-grid
+    margin-top: 6rem
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    width: 80%
+
+  .article-description-select
+    p
+      font-size: 0.8rem
+ 
 @media (min-width: 1000px)
   .content-title-text.programming-title
     width: 10rem
-
-  .programming-description
-    margin-top: 0.7rem
-    width: 24rem
 
   .programming-video
     margin-top: 0.5rem
@@ -119,9 +135,11 @@
     padding: 0
     margin-bottom: 0rem
     height: auto
+    border: none
 
   .articles-menu-one-option
-
+    border: none
+    
   .article-image-select
     width: 7rem
     margin-left: 3.3rem
@@ -130,7 +148,7 @@
     width: 18rem
 
   .article-description-select
-    width: 32ch
+    width: 46ch
     p
       font-size: 0.92rem
 
@@ -163,4 +181,8 @@
   .article-arrow
     width: 1.1rem
 
+@media (min-width: 1100px)
+  .programming-description
+    margin-top: 0.7rem
+    width: 24rem
   
