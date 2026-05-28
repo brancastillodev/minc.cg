@@ -33,6 +33,29 @@
   text-align: center
   margin-top: 0.4rem
 
+@media (min-width: 720px)
+  .videos
+    margin-top: 0.5rem
+    grid-template-columns: repeat(2, 1fr)
+    gap: 2rem
+    margin-bottom: 0.5rem
+
+  .video-card__image
+    height: 5rem
+    width: 5rem
+
+  .video-card__video
+    video
+      width: 5rem
+      height: 5rem
+
+  .video-card__title
+    width: 9rem
+    aspect-ratio: 112 / 20.2667
+
+  .video-card__desc
+    font-size: 0.65rem
+
 @media (min-width: 1000px)
   .videos
     margin-top: 2.5rem
