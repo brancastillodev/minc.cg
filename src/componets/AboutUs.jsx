@@ -18,8 +18,8 @@ function AboutUs(){
       </figure>
 
        <section className="about-us-page__description">
-        <p>Art & Design Studio . Observatory . Science Facility . Social Research Institute </p>
-        <p>Global Network . Documentation . Distribution . Programming .</p>
+        <p>A multidisciplinary studio producing stylised digital environments </p>
+        <p>and a curated retail platform.</p>
       </section> 
 
       <figure className="instagram-link">
