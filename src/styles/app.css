@@ -1001,6 +1001,14 @@ footer {
   display: none;
 }
 
+.product-advice-note {
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.7rem;
+  color: white;
+  text-shadow: 0.09rem 0.09rem 0 rgba(0, 0, 0, 0.9);
+}
+
 @media (min-width: 1000px) {
   .content-page.product-page {
     padding: 0rem;

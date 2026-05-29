@@ -16,6 +16,7 @@ function ProductPage() {
   const [pos, setPos] = useState(0)
   const [waiting, setWaiting] = useState(true);
   const [loaded, setLoaded] = useState(false)
+  const [woman, setWoman] = useState(false);
 
   useEffect(() => {
     async function fetchProduct() {
@@ -52,6 +53,7 @@ function ProductPage() {
       {waiting ?
         <p className='simple-text waiting-msg'>Loading, please wait...</p>
         :
+        <>
         <section className="product-card">
           <div className="product-card__hero">
             <p className="product-card__title">{product.title}</p>
@@ -131,9 +133,23 @@ function ProductPage() {
                 <img src={rightArrow}></img>
             </figure>
           </div>
-
+          
+          {product.size === "Raffle Tickets" && (
+            <div className="raffle-info">
+              <p className="raffle-info__text">This ticket gives you the chance to win a unique piece of art created by our AI, inspired by the theme of the current exhibition. The raffle will be held at the end of the exhibition, and the winner will be announced on our website and social media channels. Don't miss out on this opportunity to own a one-of-a-kind artwork!</p>
+            </div>
+          )}
         </section>
-      }
+        
+        <div className="product-advice-note">
+          <h3>PLEASE NOTE:</h3>
+          <br/>
+          <p>Although piercings have been cleaned before shipping,</p>
+          <p>we advise customers to carry out their own cleaniing procedure</p>
+          <p>upon receiving their purchase.</p>
+        </div>
+        </>
+    }
     </main>
   )
 }
