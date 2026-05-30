@@ -6,6 +6,7 @@ import leftArrow from "../assets/programming/leftArrow.png";
 import rightArrow from "../assets/programming/rightArrow.png";
 import AddCartButton from "./AddCartButton";
 import itemsTitle from "../assets/market/itemsTitle.png"
+import list from "../assets/market/list.png";
 
 function ProductPage() {
   const API = import.meta.env.VITE_API_URL
@@ -47,6 +48,7 @@ function ProductPage() {
     fetchProduct();
   }, [id]);
 
+  const isMobile = window.innerWidth < 768;
 
   return (
     <main className="content-page product-page">
@@ -133,22 +135,47 @@ function ProductPage() {
                 <img src={rightArrow}></img>
             </figure>
           </div>
-          
-          {product.size === "Raffle Tickets" && (
-            <div className="raffle-info">
-              <p className="raffle-info__text">This ticket gives you the chance to win a unique piece of art created by our AI, inspired by the theme of the current exhibition. The raffle will be held at the end of the exhibition, and the winner will be announced on our website and social media channels. Don't miss out on this opportunity to own a one-of-a-kind artwork!</p>
-            </div>
+
+          {product.title === "WOMENS ACCESSORIES COLLECTION" && (
+            isMobile ?
+            (<div className="raffle-info">
+              <figure className="raffle-info__title">
+                <img src={itemsTitle} alt="raffle-info-title" />
+              </figure>
+              <figure className="raffle-info__list">
+                <img src={list} alt="raffle-info-list" />
+              </figure>
+            </div> ):
+            
+            (<div className="raffle-info-desktop">
+              <figure className="raffle-info__title-desktop">
+                <img src={itemsTitle} alt="raffle-info-title" />
+              </figure>
+              <div className="raffle-info-desktop-subdivision">
+                <figure className="raffle-info__list-desktop">
+                  <img src={list} alt="raffle-info-list" />
+                </figure>
+                <div className={isMobile ?"product-advice-note":"product-advice-note-desktop"}>
+                  <h3>PLEASE NOTE:</h3>
+                  <br/>
+                  <p>Although piercings have been cleaned before shipping,</p>
+                  <p>we advise customers to carry out their own cleaniing procedure</p>
+                  <p>upon receiving their purchase.</p>
+                </div>
+              </div>
+            </div>)                                         
           )}
         </section>
-        
-        <div className="product-advice-note">
-          <h3>PLEASE NOTE:</h3>
-          <br/>
-          <p>Although piercings have been cleaned before shipping,</p>
-          <p>we advise customers to carry out their own cleaniing procedure</p>
-          <p>upon receiving their purchase.</p>
-        </div>
-        </>
+          {product.title != "WOMENS ACCESSORIES COLLECTION" &&
+            <div className={isMobile ?"product-advice-note":"product-advice-note-desktop"}>
+              <h3>PLEASE NOTE:</h3>
+              <br/>
+              <p>Although piercings have been cleaned before shipping,</p>
+              <p>we advise customers to carry out their own cleaniing procedure</p>
+              <p>upon receiving their purchase.</p>
+            </div>
+          }
+      </>
     }
     </main>
   )
