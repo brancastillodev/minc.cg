@@ -1004,7 +1004,6 @@ footer {
 .raffle-info {
   display: flex;
   flex-direction: column;
-  padding-bottom: 2rem;
 }
 
 .raffle-info__title {
@@ -1015,6 +1014,7 @@ footer {
 .raffle-info__list {
   margin-top: 2rem;
   width: 10rem;
+  margin-bottom: 1rem;
 }
 
 .product-advice-note {
@@ -1023,7 +1023,8 @@ footer {
   font-size: 0.7rem;
   color: white;
   text-shadow: 0.09rem 0.09rem 0 rgba(0, 0, 0, 0.9);
-  margin-bottom: 5rem;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
 }
 
 .raffle-info-desktop {

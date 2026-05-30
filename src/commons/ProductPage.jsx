@@ -145,8 +145,15 @@ function ProductPage() {
               <figure className="raffle-info__list">
                 <img src={list} alt="raffle-info-list" />
               </figure>
+              <div className={isMobile ?"product-advice-note":"product-advice-note-desktop"}>
+                <h3>PLEASE NOTE:</h3>
+                <br/>
+                <p>Although piercings have been cleaned before shipping,</p>
+                <p>we advise customers to carry out their own cleaniing procedure</p>
+                <p>upon receiving their purchase.</p>
+              </div>
             </div> ):
-            
+
             (<div className="raffle-info-desktop">
               <figure className="raffle-info__title-desktop">
                 <img src={itemsTitle} alt="raffle-info-title" />
