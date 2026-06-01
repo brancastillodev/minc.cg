@@ -111,7 +111,7 @@ function ProductPage() {
               </p>
             </div>
             <div className="product-card__grid-4">
-              <AddCartButton product={product}/>
+               {product.available && <AddCartButton product={product}/>}
             </div>
           </div>
 
@@ -127,7 +127,7 @@ function ProductPage() {
                 <span>{product.size && (product.size =="Raffle Tickets" ? "Tickets: " : `${product.size}:`)}</span>
                 <span>£{Math.trunc(product.price)}</span></p>
               <figure className="add-to-cart-btn">
-                <AddCartButton product={product}/>
+                {product.available && <AddCartButton product={product}/>}
               </figure>
             </div>
             <figure 

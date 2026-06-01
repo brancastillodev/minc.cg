@@ -693,6 +693,11 @@ footer {
   margin-top: 1rem;
 }
 
+.sold-out-box {
+  width: 100%;
+  height: 1.7rem;
+}
+
 .add-to-cart-text {
   width: 4.2rem;
   padding: 0 0.3rem;
@@ -725,16 +730,18 @@ footer {
 
 .sold-badge {
   position: absolute;
-  top: -0.5rem;
-  right: 0.8rem;
-  width: 4rem;
+  top: -3%;
+  right: 10%;
+  width: 39%;
+  aspect-ratio: 1/1;
 }
 
 .sold-badge-product-page {
   position: absolute;
-  top: -0.9rem;
-  right: 0.2rem;
-  width: 8rem;
+  top: 2%;
+  right: 0;
+  width: 40%;
+  height: 20%;
 }
 
 @media (min-width: 800px) {
@@ -802,6 +809,10 @@ footer {
   .about-us.add-to-cart {
     width: 7.5rem;
     margin-top: 10px;
+  }
+  .sold-out-box {
+    width: 100%;
+    height: 2.53rem;
   }
   .add-to-cart-text {
     width: 6rem;

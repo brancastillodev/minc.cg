@@ -8,7 +8,7 @@ function ItemCard({itemData}){
     <div className="item-card">
       <Link state={{ itemData }}  className="item-card__link" to={`/market/${itemData.id}`}>
         <figure className="item-image"><img src={itemData.image}/> 
-          {!itemData.available &&<figure className="sold-badge"><img src={sold}/> </figure>}
+          {!itemData.available && <figure className="sold-badge"><img src={sold}/> </figure>}
         </figure>
         <p className="item-title">{itemData.title}</p>
       </Link>
@@ -19,7 +19,10 @@ function ItemCard({itemData}){
       </div>
       
       <div className="about-us add-to-cart">
-        <AddCartButton product={itemData}/>
+        {itemData.available ?
+          <AddCartButton product={itemData} key={itemData.id}/>
+          : <div className="sold-out-box"></div>
+        }
       </div>
     </div>
 
