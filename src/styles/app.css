@@ -405,7 +405,7 @@ footer {
 }
 
 .articles-menu-grid {
-  margin-top: 7rem;
+  margin-top: 3rem;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 2rem;
