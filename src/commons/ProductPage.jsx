@@ -7,6 +7,7 @@ import rightArrow from "../assets/programming/rightArrow.png";
 import AddCartButton from "./AddCartButton";
 import itemsTitle from "../assets/market/itemsTitle.png"
 import list from "../assets/market/list.png";
+import sold from "../assets/market/sold-badge.webp"
 
 function ProductPage() {
   const API = import.meta.env.VITE_API_URL
@@ -84,6 +85,7 @@ function ProductPage() {
                 onLoad={() => setLoaded(true)}
                 style={{ opacity: loaded ? 1 : 0 }}
               />
+              {!product.available &&<figure className="sold-badge-product-page"><img src={sold}/> </figure>}
             </figure>
             <figure 
             onClick={() => { setPos(pos + 1) }} 

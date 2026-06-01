@@ -715,6 +715,28 @@ footer {
   color: #FEF001;
 }
 
+.item-image {
+  position: relative;
+}
+
+.product-card__jpg {
+  position: relative;
+}
+
+.sold-badge {
+  position: absolute;
+  top: 0rem;
+  right: 0.8rem;
+  width: 4rem;
+}
+
+.sold-badge-product-page {
+  position: absolute;
+  top: 0rem;
+  right: 0.3rem;
+  width: 8rem;
+}
+
 @media (min-width: 800px) {
   .description-section {
     gap: 2rem;

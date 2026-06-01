@@ -1,12 +1,15 @@
 import { Link } from "react-router-dom"
 import AddCartButton from "./AddCartButton";
+import sold from "../assets/market/sold-badge.webp"
 
 
 function ItemCard({itemData}){
   return(
     <div className="item-card">
       <Link state={{ itemData }}  className="item-card__link" to={`/market/${itemData.id}`}>
-        <figure className="item-image"><img src={itemData.image}/></figure>
+        <figure className="item-image"><img src={itemData.image}/> 
+          {!itemData.available &&<figure className="sold-badge"><img src={sold}/> </figure>}
+        </figure>
         <p className="item-title">{itemData.title}</p>
       </Link>
 
