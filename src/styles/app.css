@@ -636,7 +636,7 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   width: 100%;
   margin-bottom: 0.2rem;
-  row-gap: 2.5rem;
+  row-gap: 1.5rem;
 }
 
 .item-card {
@@ -652,7 +652,7 @@ footer {
 }
 
 .item-image {
-  height: 6rem;
+  height: 6.5rem;
   aspect-ratio: 513/665;
 }
 
