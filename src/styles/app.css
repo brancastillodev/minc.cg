@@ -957,7 +957,7 @@ footer {
   justify-content: space-between;
   align-items: center;
   padding: 0rem 1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 .product-card__bottom .arrow-mobile {
   display: block;
@@ -1045,8 +1045,8 @@ footer {
   font-size: 0.7rem;
   color: white;
   text-shadow: 0.09rem 0.09rem 0 rgba(0, 0, 0, 0.9);
-  margin-top: 2rem;
-  margin-bottom: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 .raffle-info-desktop {
@@ -1057,7 +1057,7 @@ footer {
   width: 100%;
   margin: 0 auto;
   margin-top: 7rem;
-  margin-bottom: 9rem;
+  margin-bottom: 7rem;
 }
 .raffle-info-desktop .raffle-info__title-desktop {
   width: 14rem;
@@ -1094,6 +1094,9 @@ footer {
   .simple-text.waiting-msg {
     font-size: 1.3rem;
     margin: 0 auto;
+  }
+  .margin-top-womans-collection {
+    margin-top: 3rem !important;
   }
   .product-card {
     display: grid;

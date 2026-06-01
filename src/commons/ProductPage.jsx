@@ -57,7 +57,7 @@ function ProductPage() {
         <p className='simple-text waiting-msg'>Loading, please wait...</p>
         :
         <>
-        <section className="product-card">
+        <section className={product.title == "WOMENS ACCESSORIES COLLECTION" ? "product-card margin-top-womans-collection" : "product-card"}>
           <div className="product-card__hero">
             <p className="product-card__title">{product.title}</p>
             <figure className="product-card__kart snipcart-checkout">
@@ -175,15 +175,15 @@ function ProductPage() {
             </div>)                                         
           )}
         </section>
-          {product.title != "WOMENS ACCESSORIES COLLECTION" &&
-            <div className={isMobile ?"product-advice-note":"product-advice-note-desktop"}>
-              <h3>PLEASE NOTE:</h3>
-              <br/>
-              <p>Although piercings have been cleaned before shipping,</p>
-              <p>we advise customers to carry out their own cleaniing procedure</p>
-              <p>upon receiving their purchase.</p>
-            </div>
-          }
+        {product.title != "WOMENS ACCESSORIES COLLECTION" &&
+          <div className={isMobile ?"product-advice-note":"product-advice-note-desktop"}>
+            <h3>PLEASE NOTE:</h3>
+            <br/>
+            <p>Although piercings have been cleaned before shipping,</p>
+            <p>we advise customers to carry out their own cleaniing procedure</p>
+            <p>upon receiving their purchase.</p>
+          </div>
+        }
       </>
     }
     </main>
