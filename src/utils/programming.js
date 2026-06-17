@@ -6,7 +6,7 @@ export const programming = [
     titleSelected: "https://res.cloudinary.com/daynclfo8/image/upload/v1767532207/UBtitle_hhcnx5.png",
     titleImage: "https://res.cloudinary.com/daynclfo8/image/upload/v1767532163/flag_fai26c.png",
     subtitle: 'A PERSPECTIVE ON RACE AND IDENTITY',
-    epilogoSelected: "An examination of race, identity and belongin in Britain. Exploring how personal experience intersects with history, perception and social reality.\n\nBy Daniel Mukendi",
+    epilogoSelected: "An examination of race, identity and belonging in Britain. Exploring how personal experience intersects with history, perception and social reality.\n\nBy Daniel Mukendi",
     author:   "Daniel Mbaya Mukendi",
     slug: "the-union-black",
     image: "https://res.cloudinary.com/daynclfo8/image/upload/v1767532163/flag_fai26c.png",
