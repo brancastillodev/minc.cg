@@ -13,7 +13,7 @@ function Programming(){
       </figure>
 
       <figure className="programming-description">
-        <img src={introProgam}  />
+        <img src={"https://res.cloudinary.com/daynclfo8/image/upload/v1781780543/programDescript_qbp2mc.png"}  />
       </figure>
 
       <div className="programming-video">
