@@ -1191,6 +1191,10 @@ footer {
     display: none;
   }
 }
+:root {
+  color-scheme: dark;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
