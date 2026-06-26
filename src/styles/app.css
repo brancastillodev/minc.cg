@@ -673,7 +673,7 @@ footer {
 .item-size-price {
   margin-top: 0.3rem;
   display: flex;
-  font-family: VCR OSD Mono;
+  font-family: VCR OSD Mono, "Arial";
   color: #FEF001;
   width: 4.8rem;
   justify-content: space-between;
@@ -715,7 +715,7 @@ footer {
 
 .simple-text.waiting-msg {
   margin-top: 1rem;
-  font-family: Questiora;
+  font-family: Questiora, "Arial";
   font-size: 0.9rem;
   color: #FEF001;
 }
@@ -797,13 +797,13 @@ footer {
     width: 7.5rem;
   }
   .raffle-ticket {
-    font-family: VCR OSD Mono;
+    font-family: VCR OSD Mono, "Arial";
     color: #FEF001;
     width: 10ch;
     font-size: 0.8rem;
   }
   .item-price {
-    font-family: VCR OSD Mono;
+    font-family: VCR OSD Mono, "Arial";
     color: #FEF001;
   }
   .about-us.add-to-cart {
@@ -828,7 +828,7 @@ footer {
   }
   .simple-text.waiting-msg {
     margin-top: 1.3rem;
-    font-family: Questiora;
+    font-family: Questiora, "Arial";
     font-size: 1.1rem;
     color: #FEF001;
   }
@@ -994,7 +994,7 @@ footer {
   top: 10%;
   font-size: 1.2rem;
   color: #FEF001;
-  font-family: Questiora, VCR OSD Mono;
+  font-family: Questiora, "Arial";
   text-shadow: 0.2em 0.2em 0.1em rgba(0, 0, 0, 0.8);
 }
 .product-card__bottom .product-card__bottom__price .no-size {
@@ -1154,7 +1154,7 @@ footer {
   }
   .product-card .product-card__grid .product-card__price {
     text-align: center;
-    font-family: Questiora, VCR OSD Mono;
+    font-family: Questiora, "Arial";
     color: #FEF001;
     text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.8);
     font-size: 1.6rem;
