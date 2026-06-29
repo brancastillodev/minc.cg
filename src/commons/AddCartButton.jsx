@@ -12,7 +12,7 @@ function AddCartButton({product}){
       data-item-description={`${product.size} | Code: ${product.sku}`}
       data-item-quantity={1}
       data-item-max-quantity="1"
-      data-item-url={`/`}
+      data-item-url={`https://www.minc-cg.com/market`}
     >             
       <img src={addToCart} alt={"add to cart button"}/>
     </figure>
