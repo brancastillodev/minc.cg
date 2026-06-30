@@ -9,7 +9,7 @@ function AddCartButton({product}){
       data-item-price={product.price}
       data-item-name={product.title}
       data-item-image={product.image}
-      data-item-description={`${product.size} | Code: ${product.sku}`}
+      data-item-description={`${product?.size ?? "No Size"} | Code: ${product.sku}`}
       data-item-quantity={1}
       data-item-max-quantity="1"
       data-item-url={`https://www.minc-cg.com/market/${product.id}`}
