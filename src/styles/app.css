@@ -654,6 +654,7 @@ footer {
 .item-image {
   height: 6.5rem;
   aspect-ratio: 513/665;
+  background-color: #1a1a1a;
 }
 
 .item-card__link {
@@ -783,6 +784,7 @@ footer {
     align-self: flex-start;
     height: 12rem;
     aspect-ratio: 513/665;
+    background-color: #1a1a1a;
   }
   .item-title {
     width: 7.5rem;

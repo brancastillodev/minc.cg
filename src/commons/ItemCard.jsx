@@ -7,7 +7,7 @@ function ItemCard({itemData}){
   return(
     <div className="item-card">
       <Link state={{ itemData }}  className="item-card__link" to={`/market/${itemData.id}`}>
-        <figure className="item-image"><img src={itemData.image}/> 
+        <figure className="item-image"><img src={itemData.image.replace("/upload/", "/upload/f_auto,q_auto,w_400/")} loading="lazy"/> 
           {!itemData.available && <figure className="sold-badge"><img src={sold}/> </figure>}
         </figure>
         <p className="item-title">{itemData.title}</p>
