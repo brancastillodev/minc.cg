@@ -515,15 +515,17 @@ footer {
     width: 85%;
     gap: 2rem;
   }
+  .articles-menu-one-option {
+    padding-left: 2.5rem;
+  }
   .article-image-select {
     width: 6rem;
-    margin-left: 2.5rem;
   }
   .article-title-select {
     width: 17rem;
   }
   .article-description-select {
-    width: 30ch;
+    max-width: 35ch;
   }
   .article-description-select p {
     font-size: 0.8rem;
@@ -560,16 +562,16 @@ footer {
   }
   .articles-menu-one-option {
     border: none;
+    padding-left: 3.3rem;
   }
   .article-image-select {
     width: 7rem;
-    margin-left: 3.3rem;
   }
   .article-title-select {
     width: 18rem;
   }
   .article-description-select {
-    width: 35ch;
+    max-width: 40ch;
   }
   .article-description-select p {
     font-size: 0.92rem;
