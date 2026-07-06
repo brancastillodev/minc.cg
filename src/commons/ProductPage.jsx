@@ -18,7 +18,6 @@ function ProductPage() {
   const [pos, setPos] = useState(0)
   const [waiting, setWaiting] = useState(true);
   const [loaded, setLoaded] = useState(false)
-  const [woman, setWoman] = useState(false);
 
   useEffect(() => {
     async function fetchProduct() {
@@ -49,7 +48,13 @@ function ProductPage() {
     fetchProduct();
   }, [id]);
 
-  const isMobile = window.innerWidth < 768;
+  const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+
+  useEffect(() => {
+    const handleResize = () => setIsMobile(window.innerWidth < 768);
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <main className="content-page product-page">
@@ -73,6 +78,7 @@ function ProductPage() {
               <img src={leftArrow}></img>
             </figure>
             <figure className="product-card__jpg">
+              {images && images.length > 0 ? (
               <img
                 loading="lazy"
                 src={images[pos].replace("/upload/", "/upload/f_auto,q_auto,w_400/")}
@@ -84,13 +90,15 @@ function ProductPage() {
                 alt={product.title}
                 onLoad={() => setLoaded(true)}
                 style={{ opacity: loaded ? 1 : 0 }}
-              />
+              />) : (
+              <p className="simple-text">No images available</p>
+              )}
               {!product.available &&<figure className="sold-badge-product-page"><img src={sold}/> </figure>}
             </figure>
             <figure 
             onClick={() => { setPos(pos + 1) }} 
             className="arrow-desktop"
-            style={pos < images.length - 1 ? { visibility: "visible" } : { visibility: "hidden" }}  
+            style={images && pos < images.length - 1 ? { visibility: "visible" } : { visibility: "hidden" }}  
             >     
               <img src={rightArrow}></img>
             </figure>
@@ -131,7 +139,7 @@ function ProductPage() {
               </figure>
             </div>
             <figure 
-              style={{ visibility: pos < images.length - 1 ? "visible" : "hidden" }} 
+              style={{ visibility: images && pos < images.length - 1 ? "visible" : "hidden" }} 
               onClick={() => { setPos(pos + 1) }} 
               className="arrow-mobile">
                 <img src={rightArrow}></img>

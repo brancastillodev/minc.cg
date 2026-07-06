@@ -8,15 +8,14 @@ import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 function Market(){
+  const API = import.meta.env.VITE_API_URL
   const [allProducts, setAllProducts] = useState([]);
   const [waiting, setWaiting] = useState(true);
 
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get(
-          "https://minc-cg-back.onrender.com/products"
-        );
+        const res = await axios.get(`${API}/products`);
         setAllProducts(res.data);
         setWaiting(false)
       } catch (error) {
