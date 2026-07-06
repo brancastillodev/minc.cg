@@ -994,7 +994,7 @@ footer {
   top: 10%;
   font-size: 1.2rem;
   color: #FEF001;
-  font-family: Questiora, "Arial";
+  font-family: VCR OSD Mono, "Arial";
   text-shadow: 0.2em 0.2em 0.1em rgba(0, 0, 0, 0.8);
 }
 .product-card__bottom .product-card__bottom__price .no-size {
@@ -1154,7 +1154,7 @@ footer {
   }
   .product-card .product-card__grid .product-card__price {
     text-align: center;
-    font-family: Questiora, "Arial";
+    font-family: VCR OSD Mono, "Arial";
     color: #FEF001;
     text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.8);
     font-size: 1.6rem;
