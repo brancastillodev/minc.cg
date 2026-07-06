@@ -530,6 +530,18 @@ footer {
   }
 }
 @media (min-width: 900px) {
+  .articles-menu-grid {
+    width: 70%;
+  }
+  .article-image-select {
+    width: 7rem;
+  }
+  .article-title-select {
+    width: 18rem;
+  }
+  .article-description-select p {
+    font-size: 0.9rem;
+  }
   .article {
     width: 70%;
     margin: 0 auto;
