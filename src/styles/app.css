@@ -530,6 +530,9 @@ footer {
   }
 }
 @media (min-width: 900px) {
+  .content-title-text.programming-title {
+    width: 6rem;
+  }
   .article {
     width: 70%;
     margin: 0 auto;
