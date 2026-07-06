@@ -1,5 +1,6 @@
 import addToCart from "../assets/market/addToCart2.png"
 
+const API = import.meta.env.VITE_API_URL
 
 function AddCartButton({product}){
   return(
@@ -12,7 +13,7 @@ function AddCartButton({product}){
       data-item-description={`${product?.size ?? "No Size"} | Code: ${product.sku}`}
       data-item-quantity={1}
       data-item-max-quantity="1"
-      data-item-url={`https://minc-cg-back.onrender.com/products/${product.id}`}
+      data-item-url={`${API}/products/${product.id}`}
     >             
       <img src={addToCart} alt={"add to cart button"}/>
     </figure>

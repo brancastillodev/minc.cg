@@ -3,7 +3,6 @@ import ItemCard from '../commons/ItemCard.jsx'
 import marketTitle from "../assets/market/marketTitle.png"
 import descriptionBox from "../assets/market/descriptBox.png"
 import viewCart from "../assets/market/viewCart.png"
-import soldBadge from "../assets/market/sold-badge.webp"
 import { Link } from 'react-router-dom'
 import axios from 'axios'
 

@@ -10,8 +10,8 @@ function Videos() {
       </figure>
 
       <section className="videos">
-       {videos.map((e)=>(
-          <VideoCard videoData={e} />
+       {videos.map((e, i)=>(
+          <VideoCard key={i} videoData={e} />
        ))}
       </section>
     </main>

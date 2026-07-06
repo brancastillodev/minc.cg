@@ -1,3 +1,4 @@
+import { Fragment } from "react";
 import { Link } from "react-router-dom"
 import {programming} from "../utils/programming"
 import programTitle from "../assets/programming/programTitle.png"
@@ -38,10 +39,10 @@ function Programming(){
             
             <div className="simple-text article-description-select">{
               e.epilogoSelected.split("\n\n").map((paragraph, index) => 
-              (<>
-              <p key={index}>{paragraph}</p>
+               (<Fragment key={index}>
+              <p>{paragraph}</p>
               <br/>
-              </>))}
+              </Fragment>))}
             </div>
           </div>
         ))}
