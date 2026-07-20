@@ -10,6 +10,23 @@ function Market(){
   const API = import.meta.env.VITE_API_URL
   const [allProducts, setAllProducts] = useState([]);
   const [waiting, setWaiting] = useState(true);
+  const [refreshKey, setRefreshKey] = useState(0);
+
+  useEffect(() => {
+    const onOrderCompleted = () => setRefreshKey(k => k + 1);
+    const interval = setInterval(() => {
+      if (window.Snipcart?.events) {
+        window.Snipcart.events.on('order.completed', onOrderCompleted);
+        clearInterval(interval);
+      }
+    }, 200);
+    return () => {
+      clearInterval(interval);
+      if (window.Snipcart?.events) {
+        window.Snipcart.events.off('order.completed', onOrderCompleted);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     const fetchProducts = async () => {
@@ -23,7 +40,7 @@ function Market(){
     };
 
     fetchProducts();
-  }, []);
+  }, [refreshKey]);
 
   return(
     <main className="content-page">

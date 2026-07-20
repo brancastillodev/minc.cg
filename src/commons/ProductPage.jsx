@@ -18,26 +18,34 @@ function ProductPage() {
   const [pos, setPos] = useState(0)
   const [waiting, setWaiting] = useState(true);
   const [loaded, setLoaded] = useState(false)
+  const [refreshKey, setRefreshKey] = useState(0);
+
+  useEffect(() => {
+    const onOrderCompleted = () => setRefreshKey(k => k + 1);
+    const interval = setInterval(() => {
+      if (window.Snipcart?.events) {
+        window.Snipcart.events.on('order.completed', onOrderCompleted);
+        clearInterval(interval);
+      }
+    }, 200);
+    return () => {
+      clearInterval(interval);
+      if (window.Snipcart?.events) {
+        window.Snipcart.events.off('order.completed', onOrderCompleted);
+      }
+    };
+  }, []);
 
   useEffect(() => {
     async function fetchProduct() {
       try {
         setWaiting(true);
-
-        if (product) {
-          const imagesRes = await axios.get(`${API}/products/images/${id}`);
-          setImages(imagesRes.data);
-
-        } else {
-          const [productRes, imagesRes] = await Promise.all([
-            axios.get(`${API}/products/${id}`),
-            axios.get(`${API}/products/images/${id}`)
-          ]);
-
-          setProduct(productRes.data);
-          setImages(imagesRes.data);
-        }
-
+        const [productRes, imagesRes] = await Promise.all([
+          axios.get(`${API}/products/${id}`),
+          axios.get(`${API}/products/images/${id}`)
+        ]);
+        setProduct(productRes.data);
+        setImages(imagesRes.data);
       } catch (error) {
         console.error("Error fetching products:", error);
       } finally {
@@ -46,7 +54,7 @@ function ProductPage() {
     }
 
     fetchProduct();
-  }, [id]);
+  }, [id, refreshKey]);
 
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
 
