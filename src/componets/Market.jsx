@@ -13,16 +13,19 @@ function Market(){
 
   useEffect(() => {
     let unsubscribe;
+    let timeout;
     const interval = setInterval(() => {
       if (window.Snipcart?.store) {
         unsubscribe = window.Snipcart.store.subscribe(() => {
-          setRefreshKey(k => k + 1);
+          clearTimeout(timeout);
+          timeout = setTimeout(() => setRefreshKey(k => k + 1), 3000);
         });
         clearInterval(interval);
       }
     }, 200);
     return () => {
       clearInterval(interval);
+      clearTimeout(timeout);
       if (typeof unsubscribe === 'function') unsubscribe();
     };
   }, []);
