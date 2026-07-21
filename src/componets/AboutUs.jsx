@@ -14,7 +14,7 @@ function AboutUs(){
       </div>
 
       <figure className="about-us-page__naming">
-        <img src={naming} alt="naming-of-creator"></img>
+        <img src={naming}></img>
       </figure>
 
        <section className="about-us-page__description">
@@ -24,7 +24,7 @@ function AboutUs(){
 
       <figure className="instagram-link">
         <a href="https://www.instagram.com/minc.cg/" target="_blank">
-            <img src={instagramIcon} alt="Instagram integration icon" />
+            <img src={instagramIcon} />
         </a>
       </figure>
 
