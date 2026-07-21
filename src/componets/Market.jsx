@@ -12,22 +12,6 @@ function Market(){
   const [refreshKey, setRefreshKey] = useState(0);
 
   useEffect(() => {
-    let unsubscribe;
-    const interval = setInterval(() => {
-      if (window.Snipcart?.events) {
-        unsubscribe = window.Snipcart.events.on('cart.confirmed', () => {
-          window.location.replace('/');
-        });
-        clearInterval(interval);
-      }
-    }, 200);
-    return () => {
-      clearInterval(interval);
-      if (typeof unsubscribe === 'function') unsubscribe();
-    };
-  }, []);
-
-  useEffect(() => {
     const fetchProducts = async () => {
       try {
         const res = await axios.get(`${API}/products`);
