@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import ItemCard from '../commons/ItemCard.jsx'
 import marketTitle from "../assets/market/marketTitle.png"
 import descriptionBox from "../assets/market/descriptBox.png"
@@ -7,26 +6,10 @@ import viewCart from "../assets/market/viewCart.png"
 import axios from 'axios'
 
 function Market(){
-  const navigate = useNavigate();
   const API = import.meta.env.VITE_API_URL
   const [allProducts, setAllProducts] = useState([]);
   const [waiting, setWaiting] = useState(true);
   const [refreshKey, setRefreshKey] = useState(0);
-
-  useEffect(() => {
-    const onOrderCompleted = () => navigate('/');
-    let subscription;
-    const interval = setInterval(() => {
-      if (window.Snipcart?.events) {
-        subscription = window.Snipcart.events.on('order.completed', onOrderCompleted);
-        clearInterval(interval);
-      }
-    }, 200);
-    return () => {
-      clearInterval(interval);
-      subscription?.off();
-    };
-  }, []);
 
   useEffect(() => {
     const fetchProducts = async () => {

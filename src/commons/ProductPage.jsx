@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import { useLocation, useParams, useNavigate } from "react-router-dom";
+import { useLocation, useParams } from "react-router-dom";
 import viewCart from "../assets/market/viewCart.png"
 import leftArrow from "../assets/programming/leftArrow.png";
 import rightArrow from "../assets/programming/rightArrow.png";
@@ -10,7 +10,6 @@ import list from "../assets/market/list.png";
 import sold from "../assets/market/sold-badge.webp"
 
 function ProductPage() {
-  const navigate = useNavigate();
   const API = import.meta.env.VITE_API_URL
   const {id} = useParams();
   const location = useLocation();
@@ -20,21 +19,6 @@ function ProductPage() {
   const [waiting, setWaiting] = useState(true);
   const [loaded, setLoaded] = useState(false)
   const [refreshKey, setRefreshKey] = useState(0);
-
-  useEffect(() => {
-    const onOrderCompleted = () => navigate('/');
-    let subscription;
-    const interval = setInterval(() => {
-      if (window.Snipcart?.events) {
-        subscription = window.Snipcart.events.on('order.completed', onOrderCompleted);
-        clearInterval(interval);
-      }
-    }, 200);
-    return () => {
-      clearInterval(interval);
-      subscription?.off();
-    };
-  }, []);
 
   useEffect(() => {
     async function fetchProduct() {
