@@ -21,6 +21,22 @@ function ProductPage() {
   const [refreshKey, setRefreshKey] = useState(0);
 
   useEffect(() => {
+    let unsubscribe;
+    const interval = setInterval(() => {
+      if (window.Snipcart?.events) {
+        unsubscribe = window.Snipcart.events.on('cart.confirmed', () => {
+          setRefreshKey(k => k + 1);
+        });
+        clearInterval(interval);
+      }
+    }, 200);
+    return () => {
+      clearInterval(interval);
+      if (typeof unsubscribe === 'function') unsubscribe();
+    };
+  }, []);
+
+  useEffect(() => {
     async function fetchProduct() {
       try {
         setWaiting(true);
