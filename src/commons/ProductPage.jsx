@@ -22,17 +22,16 @@ function ProductPage() {
 
   useEffect(() => {
     const onOrderCompleted = () => setRefreshKey(k => k + 1);
+    let subscription;
     const interval = setInterval(() => {
       if (window.Snipcart?.events) {
-        window.Snipcart.events.on('order.completed', onOrderCompleted);
+        subscription = window.Snipcart.events.on('order.completed', onOrderCompleted);
         clearInterval(interval);
       }
     }, 200);
     return () => {
       clearInterval(interval);
-      if (window.Snipcart?.events) {
-        window.Snipcart.events.off('order.completed', onOrderCompleted);
-      }
+      subscription?.off();
     };
   }, []);
 

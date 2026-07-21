@@ -3,7 +3,6 @@ import ItemCard from '../commons/ItemCard.jsx'
 import marketTitle from "../assets/market/marketTitle.png"
 import descriptionBox from "../assets/market/descriptBox.png"
 import viewCart from "../assets/market/viewCart.png"
-import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 function Market(){
@@ -14,17 +13,16 @@ function Market(){
 
   useEffect(() => {
     const onOrderCompleted = () => setRefreshKey(k => k + 1);
+    let subscription;
     const interval = setInterval(() => {
       if (window.Snipcart?.events) {
-        window.Snipcart.events.on('order.completed', onOrderCompleted);
+        subscription = window.Snipcart.events.on('order.completed', onOrderCompleted);
         clearInterval(interval);
       }
     }, 200);
     return () => {
       clearInterval(interval);
-      if (window.Snipcart?.events) {
-        window.Snipcart.events.off('order.completed', onOrderCompleted);
-      }
+      subscription?.off();
     };
   }, []);
 
