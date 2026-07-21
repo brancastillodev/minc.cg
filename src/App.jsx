@@ -1,5 +1,5 @@
 import './styles/app.css'
-import { Routes, Route, Navigate } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './componets/Navbar';
 import Footer from './componets/Footer';
 import Home from './componets/Home';
@@ -44,7 +44,6 @@ function App() {
         <Route path="/market" element={<Market/>}/>
         <Route path="/market/:id" element={<ProductPage />} />
         <Route path="/about-us" element={<AboutUs/>}/>
-        <Route path="*" element={<Navigate to="/" replace />}/>
       </Routes>
       {footer && <Footer/>}
     </div>

@@ -3,6 +3,7 @@ import ItemCard from '../commons/ItemCard.jsx'
 import marketTitle from "../assets/market/marketTitle.png"
 import descriptionBox from "../assets/market/descriptBox.png"
 import viewCart from "../assets/market/viewCart.png"
+import { Link } from 'react-router-dom'
 import axios from 'axios'
 
 function Market(){
@@ -50,9 +51,11 @@ function Market(){
         <figure className="description-box">
           <img src={descriptionBox} alt="market-title" />
         </figure>
-        <figure className="view-cart snipcart-checkout">
-          <img src={viewCart} alt="market-title" />
-        </figure>
+        <Link>
+          <figure className="view-cart snipcart-checkout">
+            <img src={viewCart} alt="market-title" />
+          </figure>
+        </Link>
       </section>
       
       {waiting ? 
