@@ -24,7 +24,7 @@ function ProductPage() {
     let unsubscribe;
     const interval = setInterval(() => {
       if (window.Snipcart?.events) {
-        unsubscribe = window.Snipcart.events.on('cart.confirmed', () => {
+        unsubscribe = window.Snipcart.events.on('order.completed', () => {
           setRefreshKey(k => k + 1);
         });
         clearInterval(interval);
