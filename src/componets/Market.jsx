@@ -14,8 +14,8 @@ function Market(){
   useEffect(() => {
     let unsubscribe;
     const interval = setInterval(() => {
-      if (window.Snipcart?.events) {
-        unsubscribe = window.Snipcart.events.on('order.completed', () => {
+      if (window.Snipcart?.store) {
+        unsubscribe = window.Snipcart.store.subscribe(() => {
           setRefreshKey(k => k + 1);
         });
         clearInterval(interval);
