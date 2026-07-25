@@ -5,10 +5,16 @@ Always use Context7 when I need library/API documentation, code generation, setu
 ## Build & Dev Commands
 
 ```bash
-npm run dev      # Start Vite dev server
-npm run build    # Production build (rolldown-vite)
+npm run build    # Production build (rolldown-vite) — also runs tsc
 npm run lint     # ESLint flat config
 npm run preview  # Preview production build locally
+npm run dev      # Start Vite dev server
+```
+
+## TypeScript
+
+- All source files use `.tsx` (components) or `.ts` (utils) extensions.
+- `tsconfig.json` with `strict: false` for minimal friction.pm run preview  # Preview production build locally
 ```
 
 No typecheck, no test suites, no CI.
@@ -20,7 +26,7 @@ No typecheck, no test suites, no CI.
 - **react-router-dom v7** with `BrowserRouter` for client-side routing.
 - **Sass** with indented `.sass` syntax (no braces). Entry: `src/styles/app.sass`.
 - **React Compiler** (`babel-plugin-react-compiler`) active via Vite config.
-- No TypeScript.
+- **TypeScript** — `.tsx`/`.ts` files, `tsconfig.json` with relaxed settings.
 
 ## Directory Quirks
 
@@ -39,7 +45,7 @@ No typecheck, no test suites, no CI.
 
 ## Data Sources
 
-- **Videos & Programming**: Static data in `src/utils/videos.js` and `src/utils/programming.js`.
+- **Videos & Programming**: Static data in `src/utils/videos.ts` and `src/utils/programming.ts`.
 - **Market products**: Fetched from the backend API at runtime.
 - `src/utils/market.js` is **unused** — not imported anywhere.
 
