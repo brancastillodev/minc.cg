@@ -1,104 +1,81 @@
-# minc.cg
+![Preview](https://res.cloudinary.com/daynclfo8/image/upload/v1765988368/2025-12-17-12-29-31_sczlz1.png)
 
-Professional website developed for **minc-cg**, translating a professional UI/UX design into a fully functional web application using **React, Sass, and HTML**.
 
-🔗 **Live Demo:** https://minc-cg.com/  
-🔗 **Video Demo:** https://youtu.be/d4GrGDv77K4
+# Minc CG
 
-## 🧠 Project Overview
+[🛍️ Live Site](https://minc-cg.com/) · [🎥 Video Demo](https://youtu.be/d4GrGDv77K4)
 
-This project consists of the faithful implementation of a professional graphic design provided by a UI/UX designer.  
-My role focused entirely on **front-end development**, ensuring that the visual design was accurately translated into clean, responsive, and maintainable code.
+---
 
-The result is a modern, scalable, and user-friendly website built with best practices in mind.
+## Español
 
-## 🎨 Design to Development
+Sitio web para **Minc CG**, una tienda online de indumentaria ubicada en Londres, Inglaterra.
 
-> The original UI/UX design was provided by a professional graphic designer.  
-> This project focuses on transforming that design into a real, responsive, and functional web application.
+El sitio funciona como e-commerce completo: catálogo de productos (Market), páginas individuales de producto, sección de artículos/programación, galería de videos, y un flujo de compra integrado de punta a punta con Snipcart (carrito, checkout y confirmación de pedido).
 
-| Design | Implementation |
-|------|----------------|
-| ![Design Preview](https://res.cloudinary.com/daynclfo8/image/upload/v1767362304/desktopHomeTemplate_ldge7a.png) | ![Live Preview](https://res.cloudinary.com/daynclfo8/image/upload/v1767360213/2026-01-02-10-21-18_t8acgo.png) |
+El diseño UX/UI fue provisto por un diseñador profesional; mi trabajo se centró en la implementación fiel del diseño y en toda la lógica de e-commerce, responsive e integraciones.
 
-*A complete visual case study and comparisons are available on Behance (link coming soon).*
+### Funcionalidades
 
-## 🧩 Technologies Used
+- 🛒 **E-commerce completo** con Snipcart: carrito, checkout, confirmación y refresco de stock post-compra
+- 🖼️ Catálogo de productos (Market) y páginas de producto individuales
+- 📰 Sección de artículos/programación con contenido multi-página
+- 🎬 Sección de videos
+- 🌗 Modo oscuro
+- 🎟️ Sección de sorteo/tickets (raffle)
+- ⚡ Optimización de imágenes vía Cloudinary
+- 🧪 Testing con Vitest + Testing Library
+- 📱 Diseño responsivo, pixel-perfect a partir del diseño original en Figma
 
-- **React**
-- **Sass**
-- **HTML5**
-- **Vite**
-- **ESLint**
-- **Vercel**
+### Stack técnico
 
-## 📂 Project Structure
+**Frontend:** React, TypeScript, Sass, Vite
+**E-commerce:** Snipcart
+**Imágenes:** Cloudinary
+**Testing:** Vitest, Testing Library
+**Deploy:** Vercel
 
-```text
-minc.cg/
-├─ public/
-├─ src/
-│  ├─ assets/
-│  ├─ components/
-│  ├─ pages/
-│  └─ styles/
-├─ package-lock.json
-├─ vite.config.js
-├─ vercel.json
-├─ index.html
-└─ README.md
-```
+### Sobre el desarrollo
 
-## 🚀 Installation & Usage
+Proyecto en desarrollo activo y sostenido desde **octubre de 2025**, con más de 300 commits documentando el proceso: desde la implementación inicial del diseño hasta la integración completa de e-commerce con Snipcart, migración a TypeScript, y testing automatizado.
 
-Clone the repository:
+Diseño UX/UI por **Daniel Aziah** (Londres, Inglaterra).
 
-```git clone https://github.com/pibelanzallamas/minc.cg.git```  
-```cd minc.cg```
+---
 
-Install dependencies:
+## English
 
-```npm install```
+Website for **Minc CG**, an online clothing store based in London, England.
 
-Run the development server:
+The site works as a full e-commerce platform: a product catalog (Market), individual product pages, an articles/programming section, a video gallery, and an end-to-end purchase flow powered by Snipcart (cart, checkout, and order confirmation).
 
-```npm run dev```
+The UX/UI design was provided by a professional designer; my work focused on the faithful implementation of that design along with all the e-commerce logic, responsiveness, and integrations.
 
-## ✨ Key Features
+### Features
 
-- Pixel-accurate implementation of a professional design  
-- Fully responsive layout (desktop & mobile)  
-- Reusable and scalable React components  
-- Clean and organized Sass architecture  
-- Smooth navigation and modern UI  
+- 🛒 **Full e-commerce flow** with Snipcart: cart, checkout, order confirmation, and post-purchase stock refresh
+- 🖼️ Product catalog (Market) and individual product pages
+- 📰 Articles/programming section with multi-page content
+- 🎬 Video section
+- 🌗 Dark mode
+- 🎟️ Raffle/tickets section
+- ⚡ Image optimization via Cloudinary
+- 🧪 Testing with Vitest + Testing Library
+- 📱 Responsive, pixel-perfect implementation based on the original Figma design
 
-## 📸 Screenshots
+### Tech stack
 
-### Desktop
-![Home Desktop](https://res.cloudinary.com/daynclfo8/image/upload/v1767315491/2026-01-01-21-57-29_c8rsci.png)
+**Frontend:** React, TypeScript, Sass, Vite
+**E-commerce:** Snipcart
+**Images:** Cloudinary
+**Testing:** Vitest, Testing Library
+**Deploy:** Vercel
 
-### Mobile
-![Home Mobile](https://res.cloudinary.com/daynclfo8/image/upload/v1767360558/2026-01-02-10-28-58_xub4uo.png)
+### About the development
 
-## 📌 Project Status
+In active, sustained development since **October 2025**, with 300+ commits documenting the process — from the initial design implementation through full Snipcart e-commerce integration, a migration to TypeScript, and automated testing.
 
-✅ Completed and deployed  
+UX/UI design by **Daniel Aziah** (London, England).
 
-🔧 Possible future improvements:
-- Moving animations  
-- Programming section  
-- Market section available
-
-## 👤 Author
-
-**Brandon Castillo**  
-Front-End Developer  
-Buenos Aires, Argentina  
-
-**Daniel Aziah**  
-Ux/Ui Design  
-London, England
-
-## 📄 License
-
-This project is licensed under the **MIT License**.
+Thanks for checking out the repo.
+Brandon
