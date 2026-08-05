@@ -3,7 +3,7 @@
 
 # Minc CG
 
-[🛍️ Live Site](https://minc-cg.com/) · [🎥 Video Demo](https://youtu.be/d4GrGDv77K4)
+[🛍️ Live Site](https://minc-cg.com/) · [🎥 Video Demo](https://www.youtube.com/watch?v=Ihdt5zmyT1s)
 
 ---
 
