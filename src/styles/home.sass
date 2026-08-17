@@ -1,10 +1,19 @@
 .welcome-page
   justify-content: center
-  
+  align-items: center
+  margin-top: -3.25rem
+
+.greetings-section
+  display: flex
+  flex-direction: column
+  align-items: center
+  justify-content: center
+  align-self: stretch
+  flex: 1
+
 .greetings-message
   width: 15.8rem
   aspect-ratio: 1977 / 1121
-  margin-top: 9rem
 
 .home-animated-bar
   width: 15.8rem
@@ -17,10 +26,10 @@
 
 @media (min-width: 900px)
   .welcome-page
-    align-items: flex-start
+    align-items: center
+    margin-top: -5.35rem
 
   .greetings-message
-    margin-top: 3.5rem
     width: 19.8rem
 
   .home-animated-bar
@@ -44,21 +53,21 @@
     align-items: center
 
   .greetings-message
-    margin-top: 1.6rem
     width: 23.8rem
 
   .home-animated-bar
     margin-top: 3rem
     width: 21rem
     height: 100px
+    margin-left: -2.5rem
     video
       transform: translate(-31.3%, -35%) scale(0.55)
-    
+
   .figures-contenedor
     display: flex
     position: relative
     flex: 1
-    height: 700px
+    align-self: stretch
     figure
       position: absolute
       width: 450px
@@ -67,16 +76,16 @@
     position: absolute
     display: flex
     width: 220px
-    aspect-ratio: 1 /1
+    aspect-ratio: 1 / 1
 
   .fondo-a
     aspect-ratio: 660 / 674
-    top: -20px
-    left: -50px
+    top: 15px
+    left: -105px
 
   .figure-a
-    top: 78px
-    left: 47px
+    top: 115px
+    left: -8px
 
   .fondo-b
     aspect-ratio: 626 / 652
@@ -88,10 +97,16 @@
     bottom: -50px
     right: 25px
 
+@media (min-width: 1248px) and (max-height: 850px)
+  .fondo-a
+    top: 10px
+
+  .figure-a
+    top: 110px
+
 // @media (min-width: 700px)
 //   .figures-contenedor
 //     display: flex
 
 //   .figure-a
 //     display: none
-
